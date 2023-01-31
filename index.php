@@ -9,10 +9,10 @@
     </div>
 </div>
 <div class="sponsor">
-    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - </marquee>
-    <marquee>Valiant - MMI ChamfqsdjkghqdfklghqdfjklghjqdeklrMbéry - L'avalanche - Breakout - </marquee>
-    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - </marquee>
-    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - </marquee>
+    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - MICOUD Production - </marquee>
+    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - MICOUD Production -</marquee>
+    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - MICOUD Production -</marquee>
+    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - MICOUD Production -  </marquee>
 </div>
 <div class="info-event">
     <div class="text">
