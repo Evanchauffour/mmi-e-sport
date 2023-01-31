@@ -25,3 +25,9 @@
     <img src="../mmi-e-sport/assets/img/star.svg" alt="" class="star2">
     <img src="../mmi-e-sport/assets/img/star.svg" alt="" class="star3">
 </div>
+<div class="twitch">
+    <img src="../mmi-e-sport/assets/img/rejoigniez.svg" alt="">
+    <div class="live"></div>
+</div>
+
+<?php include('footer.php') ?>

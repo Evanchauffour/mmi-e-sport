@@ -156,3 +156,35 @@
         width: 180px;
     }
 }
+
+.twitch{
+    background-color: #404A9A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    margin-bottom: 80px;
+
+    img{
+        margin-bottom: 75px;
+    }
+
+    .live{
+        position: relative;
+        width: 700px;
+        height: 400px;
+        background-color: beige;
+    }
+
+    .live::before{
+        content: '';
+        position: absolute;
+        left: -10px;
+        bottom: -10px;
+        border-left: solid white;
+        border-bottom: solid white;
+        width: 50%;
+        height: 80%;
+    }
+}

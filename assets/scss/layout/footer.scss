@@ -1,0 +1,45 @@
+footer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 90px;
+
+    img{
+        margin-left: 160px;
+        width: 116px;
+    }
+
+    p{
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+        font-size: 20px;
+        font-family: clash-reg;
+    }
+
+    .info{
+        display: flex;
+        margin-right: 160px;
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            margin-left: 115px;
+
+            li{
+                font-family: clash-reg;
+                font-size: 20px;
+                list-style: none;
+                color: #404A9A;
+                font-weight: 400;
+            }
+
+            li:nth-child(1){
+                font-family: clash-semibold;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

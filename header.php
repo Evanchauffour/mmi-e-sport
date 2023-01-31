@@ -14,7 +14,7 @@
                 <li data-page='1'>Accueil</li>
                 <li data-page='2'>Programme</li>
                 <li data-page='3'>Jeux</li>
-                <li data-page='4'>Contact</li>
+                <li data-page='4'>equipes</li>
                 <li>Se connecter</li>
             </ul>
 
