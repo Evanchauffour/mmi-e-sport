@@ -47,6 +47,8 @@ header ul li {
   color: #ffffff;
   font-family: clash-semibold;
   font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .home {
@@ -92,12 +94,33 @@ header ul li {
   margin-bottom: 45px;
 }
 .home .infos a {
+  position: relative;
   font-family: clash-reg;
   text-decoration: none;
   color: #3C4B97;
   font-size: 20px;
   background-color: white;
   padding: 15px;
+  border-radius: 2px;
+  transition: all 0.5s ease;
+}
+.home .infos a:hover {
+  left: 5px;
+  bottom: 5px;
+}
+.home .infos a:hover::before {
+  left: -5px;
+  bottom: -5px;
+}
+.home .infos a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #404A9A;
+  z-index: -1;
 }
 
 .sponsor {
@@ -112,12 +135,12 @@ header ul li {
 
 .info-event {
   position: relative;
-  margin: 150px 200px;
+  margin: 150px 300px;
   display: flex;
   justify-content: space-between;
 }
 .info-event .text {
-  width: 50%;
+  width: 446px;
 }
 .info-event .text h2 {
   font-family: clash-bold;
@@ -142,9 +165,10 @@ header ul li {
   margin-top: 30px;
   font-family: 16px;
   font-family: clash-reg;
+  width: 100%;
 }
 .info-event .picture {
-  width: 450px;
+  width: 448px;
   height: 330px;
   background-color: #3C4B97;
 }
@@ -152,16 +176,19 @@ header ul li {
   position: absolute;
   left: -80px;
   top: -80px;
-  width: 123px;
+  width: 100px;
 }
 .info-event .star2 {
   position: absolute;
-  left: 0;
-  top: 200px;
+  left: -200px;
+  top: 0;
+  width: 180px;
 }
 .info-event .star3 {
   position: absolute;
-  right: 0;
+  right: -120px;
+  bottom: -120px;
+  width: 180px;
 }
 
 /*# sourceMappingURL=app.css.map */
