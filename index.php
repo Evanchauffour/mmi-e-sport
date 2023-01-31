@@ -9,7 +9,7 @@
     </div>
 </div>
 <div class="sponsor">
-    <marquee>Valiant - MMI Chambéry - L'jipjipjpiavalanche - Breakout - </marquee>
+    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - </marquee>
     <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - </marquee>
     <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - </marquee>
     <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - </marquee>
