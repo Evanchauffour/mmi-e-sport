@@ -31,7 +31,6 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                 <li data-page='2'>Programme</li>
                 <li data-page='3'>Jeux</li>
                 <li data-page='4'>Contact</li>
-                <li><a href="deco.php">deco</a></li>
                 <?php
                 if($_SESSION['utilisateur']==''){
                 ?>
@@ -41,6 +40,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                 else{
                 ?>
                  <li><a href=""><?php echo$_SESSION['utilisateur']['nom']?></a></li>
+                 <li><a href="deco.php">deco</a></li>
                 <?php
                 }
                 ?>
