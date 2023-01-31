@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+@font-face {
+    font-family: clash-bold;
+    src: url(../fonts/ClashDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: clash-semibold;
+    src: url(../fonts/ClashDisplay-Semibold.ttf);
+}
+
+@font-face {
+    font-family: clash-reg;
+    src: url(../fonts/ClashDisplay-Regular.otf);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 8vw;
+
+    img{
+        margin-left: 160px;
+        width: 60px;
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+        margin-right: 160px;
+
+        li{
+            padding-left: 40px;
+            color: #ffffff;
+            font-family: clash-semibold;
+            font-size: 14px;
+        }
+    }
+}

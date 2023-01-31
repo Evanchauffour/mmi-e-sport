@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: clash-bold;
+  src: url(../fonts/ClashDisplay-Bold.ttf);
+}
+@font-face {
+  font-family: clash-semibold;
+  src: url(../fonts/ClashDisplay-Semibold.ttf);
+}
+@font-face {
+  font-family: clash-reg;
+  src: url(../fonts/ClashDisplay-Regular.otf);
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 8vw;
+}
+header img {
+  margin-left: 160px;
+  width: 60px;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  margin-right: 160px;
+}
+header ul li {
+  padding-left: 40px;
+  color: #ffffff;
+  font-family: clash-semibold;
+  font-size: 14px;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/Accueil-background.png);
+  background-size: cover;
+}
+.home .infos {
+  position: absolute;
+  top: 50%;
+  left: 160px;
+  transform: translateY(-50%);
+  color: rgb(255, 255, 255);
+}
+.home .infos h1 {
+  font-family: clash-bold;
+  font-size: 96px;
+  font-weight: 700;
+}
+.home .infos h1 br {
+  content: "";
+  display: block;
+  margin-bottom: -40px;
+}
+.home .infos h2 {
+  font-size: 48px;
+  font-family: clash-reg;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+}
+.home .infos h2 span {
+  display: block;
+  height: 2px;
+  width: 174px;
+  background-color: white;
+}
+.home .infos p {
+  font-size: 25px;
+  font-family: clash-reg;
+  font-weight: 400;
+  margin-bottom: 45px;
+}
+.home .infos a {
+  font-family: clash-reg;
+  text-decoration: none;
+  color: #3C4B97;
+  font-size: 20px;
+  background-color: white;
+  padding: 15px;
+}
+
+.sponsor {
+  display: flex;
+  margin-top: 10px;
+}
+.sponsor marquee {
+  font-size: 32px;
+  font-family: clash-semibold;
+  color: #404A9A;
+}
+
+.info-event {
+  position: relative;
+  margin: 150px 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.info-event .text {
+  width: 50%;
+}
+.info-event .text h2 {
+  font-family: clash-bold;
+  font-size: 64px;
+  color: #404A9A;
+}
+.info-event .text h3 {
+  display: flex;
+  align-items: center;
+  font-family: clash-reg;
+  font-size: 48px;
+  font-weight: 400;
+  color: #404A9A;
+}
+.info-event .text h3 span {
+  display: block;
+  height: 2px;
+  width: 174px;
+  background-color: #404A9A;
+}
+.info-event .text p {
+  margin-top: 30px;
+  font-family: 16px;
+  font-family: clash-reg;
+}
+.info-event .picture {
+  width: 450px;
+  height: 330px;
+  background-color: #3C4B97;
+}
+.info-event .star1 {
+  position: absolute;
+  left: -100px;
+  width: 123px;
+}
+.info-event .star2 {
+  position: absolute;
+  left: 0;
+  top: 200px;
+}
+.info-event .star3 {
+  position: absolute;
+  right: 0;
+}
+
+/*# sourceMappingURL=app.css.map */

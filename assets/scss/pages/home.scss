@@ -1,0 +1,130 @@
+.home{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/Accueil-background.png);
+    background-size: cover;
+
+    .infos{
+
+        position: absolute;
+        top: 50%;
+        left: 160px;
+        transform: translateY(-50%);
+        color: rgb(255, 255, 255);
+        h1{
+            font-family: clash-bold;
+            font-size: 96px;
+            font-weight: 700;
+
+            br {
+                content: "";
+                display: block;
+                margin-bottom: -40px; // la taille de l'espace voulu en px, %, em, hv, pt, etc...
+               }
+        }
+
+        h2{
+            font-size: 48px;
+            font-family: clash-reg;
+            display: flex;
+            font-weight: 400;
+            align-items: center;
+
+            span{
+                display: block;
+                height: 2px;
+                width: 174px;
+                background-color: white;
+            }
+        }
+
+        p{
+            font-size: 25px;
+            font-family: clash-reg;
+            font-weight: 400;
+            margin-bottom: 45px;
+        }
+
+        a{
+            font-family: clash-reg;
+            text-decoration: none;
+            color: #3C4B97;
+            font-size: 20px;
+            background-color: white;
+            padding: 15px;
+        }
+    }
+}
+
+.sponsor{
+
+    display: flex;
+    margin-top: 10px;
+
+    marquee{
+        font-size: 32px;
+        font-family: clash-semibold;
+        color: #404A9A;
+    }
+}
+
+.info-event{
+    position: relative;
+    margin: 150px 200px;
+    display: flex;
+    justify-content: space-between;
+
+    .text{
+
+    width: 50%;
+
+    h2{
+        font-family: clash-bold;
+        font-size: 64px;
+        color: #404A9A;
+    }
+
+    h3{
+        display: flex;
+        align-items: center;
+        font-family: clash-reg;
+        font-size: 48px;
+        font-weight: 400;
+        color: #404A9A;
+
+        span{
+            display: block;
+            height: 2px;
+            width: 174px;
+            background-color: #404A9A;
+        }
+    }
+
+    p{
+        margin-top: 30px;
+        font-family: 16px;
+        font-family: clash-reg;
+    }
+}
+
+    .picture{
+        width: 450px;
+        height: 330px;
+        background-color: #3C4B97;
+    }
+
+    .star1{
+        position: absolute;
+        left: -100px;
+        width: 123px;
+    }
+    .star2{
+        position: absolute;
+        left: 0;
+        top: 200px;
+    }
+    .star3{
+        position: absolute;
+        right: 0;
+    }
+}
