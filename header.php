@@ -31,10 +31,11 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                 <li data-page='2'>Programme</li>
                 <li data-page='3'>Jeux</li>
                 <li data-page='4'>Contact</li>
+                <li><a href="deco.php">deco</a></li>
                 <?php
                 if($_SESSION['utilisateur']==''){
                 ?>
-                <li><a href="">Se connecter</a></li>
+                <li><a href="connexion.php">Se connecter</a></li>
                 <?php
                 }
                 else{
