@@ -40,7 +40,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                 else{
                 ?>
                  <li><a href=""><?php echo$_SESSION['utilisateur']['nom']?></a></li>
-                 <li><a href="deco.php">deco</a></li>
+                 <li><a href="deco.php">Déconnexion</a></li>
                 <?php
                 }
                 ?>
