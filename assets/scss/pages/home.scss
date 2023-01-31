@@ -5,7 +5,6 @@
     background-size: cover;
 
     .infos{
-
         position: absolute;
         top: 50%;
         left: 160px;
@@ -46,12 +45,36 @@
         }
 
         a{
+            position: relative;
             font-family: clash-reg;
             text-decoration: none;
             color: #3C4B97;
             font-size: 20px;
             background-color: white;
             padding: 15px;
+            border-radius: 2px;
+            transition: all 0.5s ease;
+
+            &:hover{
+                left: 5px;
+                bottom: 5px;
+            }
+
+            &:hover::before{
+                left: -5px;
+                bottom: -5px;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #404A9A;
+                z-index: -1;
+            }
         }
     }
 }
@@ -70,13 +93,13 @@
 
 .info-event{
     position: relative;
-    margin: 150px 200px;
+    margin: 150px 300px;
     display: flex;
     justify-content: space-between;
 
     .text{
 
-    width: 50%;
+    width: 446px;
 
     h2{
         font-family: clash-bold;
@@ -104,11 +127,12 @@
         margin-top: 30px;
         font-family: 16px;
         font-family: clash-reg;
+        width: 100%;
     }
 }
 
     .picture{
-        width: 450px;
+        width: 448px;
         height: 330px;
         background-color: #3C4B97;
     }
@@ -117,15 +141,18 @@
         position: absolute;
         left: -80px;
         top: -80px;
-        width: 123px;
+        width: 100px;
     }
     .star2{
         position: absolute;
-        left: 0;
-        top: 200px;
+        left: -200px;
+        top: 0;
+        width: 180px;
     }
     .star3{
         position: absolute;
-        right: 0;
+        right: -120px;
+        bottom: -120px;
+        width: 180px;
     }
 }
