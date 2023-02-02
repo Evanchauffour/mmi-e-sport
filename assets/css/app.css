@@ -435,7 +435,7 @@ footer .info ul li:nth-child(1) {
 .container-inscription form .container-input .container-input_label {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 110%;
 }
 .container-inscription form input {
   border: none;
