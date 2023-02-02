@@ -22,4 +22,5 @@
     <p>Copyright © Synergie</p>
     <script src="../mmi-e-sport/assets/js/header.js"></script>
     <script src="../mmi-e-sport/assets/js/page.js"></script>
+    <script src="../mmi-e-sport/assets/js/paralax.js"></script>
 </footer>

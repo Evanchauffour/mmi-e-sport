@@ -5,6 +5,7 @@
 
 body{
     overflow-x: hidden;
+    background-color: #F1F1F1;
 }
 
 ::-webkit-scrollbar{
@@ -27,6 +28,7 @@ body{
 }
 
 .page-home{
+    
     header{
         background-color: transparent;
         transition: all 0.3s ease;
@@ -44,6 +46,10 @@ body{
             color: white;
         }
     }
+
+    header.twitch-scroll{
+        background-color: #ffffff;
+    }
 }
 
 body{
@@ -60,7 +66,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 8vw;
+    height: 5vw;
     z-index: 1000;
 
     img{

@@ -12,10 +12,10 @@
     <header>
         <a href="index.php"><img src="../mmi-e-sport/assets/img/logo.svg" alt=""></a>
             <ul>
-                <li data-page='1'>Accueil</li>
-                <li data-page='2'>Programme</li>
-                <li data-page='3'>Jeux</li>
-                <li data-page='4'>equipes</li>
+                <li class="link" data-page='1'>Accueil</li>
+                <li class="link" data-page='2'>Programme</li>
+                <li class="link" data-page='3'>Jeux</li>
+                <li class="link" data-page='4'>equipes</li>
                 <li><a href="connexion.php">Se connecter</a></li>
             </ul>
 

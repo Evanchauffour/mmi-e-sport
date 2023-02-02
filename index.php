@@ -30,7 +30,9 @@
 </div>
 <div class="twitch">
     <img src="../mmi-e-sport/assets/img/rejoigniez.svg" alt="">
-    <div class="live"></div>
+    <div class="live">
+    <iframe src="https://clips.twitch.tv/embed?clip=GleamingLazyBubbleteaWTRuck-VqjqxwFtpiXC4x_L&parent=mmi.univ-smb.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+        </div>
 </div>
 </div>
 

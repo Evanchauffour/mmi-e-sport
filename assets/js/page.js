@@ -1,4 +1,4 @@
-const links = document.querySelectorAll('li');
+const links = document.querySelectorAll('.link');
 const pages = document.querySelectorAll('.page');
 index = 0;
 

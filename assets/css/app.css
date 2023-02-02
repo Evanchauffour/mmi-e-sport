@@ -5,6 +5,7 @@
 
 body {
   overflow-x: hidden;
+  background-color: #F1F1F1;
 }
 
 ::-webkit-scrollbar {
@@ -37,6 +38,9 @@ body {
 .page-home header.scroll a {
   color: white;
 }
+.page-home header.twitch-scroll {
+  background-color: #ffffff;
+}
 
 body header {
   background-color: #404A9A;
@@ -50,7 +54,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 8vw;
+  height: 5vw;
   z-index: 1000;
 }
 header img {
@@ -81,22 +85,22 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 90px;
+  padding-top: 20px;
+  padding-bottom: 40px;
   border-top: solid #404A9A;
   z-index: 10000;
-  background-color: white;
+  background-color: #F1F1F1;
 }
 footer img {
   margin-left: 160px;
-  width: 116px;
+  width: 80px;
 }
 footer p {
   position: absolute;
   left: 50%;
   bottom: 10px;
   transform: translateX(-50%);
-  font-size: 20px;
+  font-size: 10px;
   font-family: clash-reg;
 }
 footer .info {
@@ -110,7 +114,7 @@ footer .info ul {
 }
 footer .info ul li {
   font-family: clash-reg;
-  font-size: 20px;
+  font-size: 15px;
   list-style: none;
   color: #404A9A;
   font-weight: 400;
@@ -247,18 +251,21 @@ footer .info ul li:nth-child(1) {
   left: -80px;
   top: -80px;
   width: 100px;
+  z-index: -1;
 }
 .page-home .info-event .star2 {
   position: absolute;
   left: -200px;
   top: 0;
   width: 180px;
+  z-index: -1;
 }
 .page-home .info-event .star3 {
   position: absolute;
   right: -120px;
   bottom: -120px;
   width: 180px;
+  z-index: -1;
 }
 .page-home .twitch {
   background-color: #404A9A;
@@ -276,6 +283,12 @@ footer .info ul li:nth-child(1) {
   width: 700px;
   height: 400px;
   background-color: beige;
+}
+.page-home .twitch .live iframe {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: relative;
 }
 .page-home .twitch .live::before {
   content: "";
@@ -435,7 +448,7 @@ footer .info ul li:nth-child(1) {
 .container-inscription form .container-input .container-input_label {
   display: flex;
   justify-content: space-between;
-  width: 110%;
+  width: 100%;
 }
 .container-inscription form input {
   border: none;
