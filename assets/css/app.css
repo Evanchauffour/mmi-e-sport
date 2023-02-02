@@ -23,8 +23,27 @@ body {
   font-family: clash-reg;
   src: url(../fonts/ClashDisplay-Regular.otf);
 }
+.page-home header {
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.page-home header.scroll {
+  background-color: #404A9A;
+}
+.page-home header.scroll li {
+  color: white;
+  cursor: pointer;
+}
+.page-home header.scroll a {
+  color: white;
+}
+
+body header {
+  background-color: #404A9A;
+}
+
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -32,6 +51,7 @@ header {
   align-items: center;
   width: 100vw;
   height: 8vw;
+  z-index: 1000;
 }
 header img {
   margin-left: 160px;
@@ -60,7 +80,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 60px;
   padding-bottom: 90px;
+  border-top: solid #404A9A;
 }
 footer img {
   margin-left: 160px;
@@ -95,49 +117,52 @@ footer .info ul li:nth-child(1) {
   margin-bottom: 10px;
 }
 
-.home {
+.page-home {
+  display: block;
+}
+.page-home .home {
   width: 100vw;
   height: 100vh;
   background-image: url(../img/Accueil-background.png);
   background-size: cover;
 }
-.home .infos {
+.page-home .home .infos {
   position: absolute;
   top: 50%;
   left: 160px;
   transform: translateY(-50%);
   color: rgb(255, 255, 255);
 }
-.home .infos h1 {
+.page-home .home .infos h1 {
   font-family: clash-bold;
   font-size: 96px;
   font-weight: 700;
 }
-.home .infos h1 br {
+.page-home .home .infos h1 br {
   content: "";
   display: block;
   margin-bottom: -40px;
 }
-.home .infos h2 {
+.page-home .home .infos h2 {
   font-size: 48px;
   font-family: clash-reg;
   display: flex;
   font-weight: 400;
   align-items: center;
 }
-.home .infos h2 span {
+.page-home .home .infos h2 span {
   display: block;
   height: 2px;
   width: 174px;
   background-color: white;
 }
-.home .infos p {
+.page-home .home .infos p {
   font-size: 25px;
   font-family: clash-reg;
   font-weight: 400;
   margin-bottom: 45px;
 }
-.home .infos a {
+.page-home .home .infos a {
   position: relative;
   font-family: clash-reg;
   text-decoration: none;
@@ -148,15 +173,15 @@ footer .info ul li:nth-child(1) {
   border-radius: 2px;
   transition: all 0.5s ease;
 }
-.home .infos a:hover {
+.page-home .home .infos a:hover {
   left: 5px;
   bottom: 5px;
 }
-.home .infos a:hover::before {
+.page-home .home .infos a:hover::before {
   left: -5px;
   bottom: -5px;
 }
-.home .infos a::before {
+.page-home .home .infos a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -166,32 +191,30 @@ footer .info ul li:nth-child(1) {
   background-color: #404A9A;
   z-index: -1;
 }
-
-.sponsor {
+.page-home .sponsor {
   display: flex;
   margin-top: 10px;
 }
-.sponsor marquee {
+.page-home .sponsor marquee {
   font-size: 32px;
   font-family: clash-semibold;
   color: #404A9A;
 }
-
-.info-event {
+.page-home .info-event {
   position: relative;
   margin: 150px 300px;
   display: flex;
   justify-content: space-between;
 }
-.info-event .text {
+.page-home .info-event .text {
   width: 446px;
 }
-.info-event .text h2 {
+.page-home .info-event .text h2 {
   font-family: clash-bold;
   font-size: 64px;
   color: #404A9A;
 }
-.info-event .text h3 {
+.page-home .info-event .text h3 {
   display: flex;
   align-items: center;
   font-family: clash-reg;
@@ -199,61 +222,59 @@ footer .info ul li:nth-child(1) {
   font-weight: 400;
   color: #404A9A;
 }
-.info-event .text h3 span {
+.page-home .info-event .text h3 span {
   display: block;
   height: 2px;
   width: 174px;
   background-color: #404A9A;
 }
-.info-event .text p {
+.page-home .info-event .text p {
   margin-top: 30px;
   font-family: 16px;
   font-family: clash-reg;
   width: 100%;
 }
-.info-event .picture {
+.page-home .info-event .picture {
   width: 448px;
   height: 330px;
   background-color: #3C4B97;
 }
-.info-event .star1 {
+.page-home .info-event .star1 {
   position: absolute;
   left: -80px;
   top: -80px;
   width: 100px;
 }
-.info-event .star2 {
+.page-home .info-event .star2 {
   position: absolute;
   left: -200px;
   top: 0;
   width: 180px;
 }
-.info-event .star3 {
+.page-home .info-event .star3 {
   position: absolute;
   right: -120px;
   bottom: -120px;
   width: 180px;
 }
-
-.twitch {
+.page-home .twitch {
   background-color: #404A9A;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 80px;
-  margin-bottom: 80px;
 }
-.twitch img {
+.page-home .twitch img {
   margin-bottom: 75px;
 }
-.twitch .live {
+.page-home .twitch .live {
   position: relative;
   width: 700px;
   height: 400px;
   background-color: beige;
 }
-.twitch .live::before {
+.page-home .twitch .live::before {
   content: "";
   position: absolute;
   left: -10px;
@@ -262,6 +283,270 @@ footer .info ul li:nth-child(1) {
   border-bottom: solid white;
   width: 50%;
   height: 80%;
+}
+
+.container-connexion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 180px;
+  background-color: white;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-bottom: 150px;
+}
+.container-connexion h1 {
+  font-size: 32px;
+  font-family: clash-bold;
+  color: #404A9A;
+}
+.container-connexion form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.container-connexion form input {
+  border: none;
+  border-bottom: solid 2px #404A9A;
+  background-color: transparent;
+  font-family: clash-reg;
+  color: #404A9A;
+}
+.container-connexion form input:focus {
+  outline: none;
+}
+.container-connexion form label {
+  font-family: clash-reg;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #404A9A;
+  margin-right: 10px;
+}
+.container-connexion form button {
+  font-size: 20px;
+  font-family: clash-reg;
+  border: none;
+  color: #404A9A;
+  border: solid 2px #404A9A;
+  background-color: transparent;
+  width: 160px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+.container-connexion form button:hover {
+  background-color: #404A9A;
+  color: white;
+}
+.container-connexion p {
+  font-family: clash-reg;
+  font-size: 16px;
+  color: #555555;
+}
+.container-connexion p a {
+  color: #555555;
+}
+
+.bg-connexion {
+  position: absolute;
+  top: calc(50% + 8vh);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.container-inscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 180px;
+  background-color: white;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-bottom: 150px;
+}
+.container-inscription h1 {
+  font-size: 32px;
+  font-family: clash-bold;
+  color: #404A9A;
+}
+.container-inscription form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.container-inscription form input {
+  border: none;
+  border-bottom: solid 2px #404A9A;
+  background-color: transparent;
+  font-family: clash-reg;
+  color: #404A9A;
+}
+.container-inscription form input:focus {
+  outline: none;
+}
+.container-inscription form label {
+  font-family: clash-reg;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #404A9A;
+  margin-right: 10px;
+}
+.container-inscription form button {
+  font-size: 20px;
+  font-family: clash-reg;
+  border: none;
+  color: #404A9A;
+  border: solid 2px #404A9A;
+  background-color: transparent;
+  width: 160px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+.container-inscription form button:hover {
+  background-color: #404A9A;
+  color: white;
+}
+.container-inscription p {
+  font-family: clash-reg;
+  font-size: 16px;
+  color: #555555;
+}
+.container-inscription p a {
+  color: #555555;
+}
+
+.page-jeux {
+  display: none;
+  margin-bottom: 110px;
+}
+.page-jeux .container-jeux-competitif {
+  margin-top: calc(8vh + 120px);
+  margin-left: 160px;
+  margin-right: 160px;
+}
+.page-jeux .container-jeux-competitif h1 {
+  font-family: clash-bold;
+  font-size: 40px;
+  color: #404A9A;
+}
+.page-jeux .container-jeux-competitif h2 {
+  display: flex;
+  align-items: center;
+  font-family: clash-reg;
+  font-size: 24px;
+  color: #404A9A;
+}
+.page-jeux .container-jeux-competitif h2 span {
+  width: 100px;
+  background-color: #404A9A;
+  height: 2px;
+  margin-right: 4px;
+}
+.page-jeux .container-jeux-competitif .jeux-competitif {
+  display: flex;
+  gap: 30px;
+}
+.page-jeux .container-jeux-competitif .jeux-competitif .jeux {
+  position: relative;
+  margin-top: 50px;
+  width: calc(33.3333333333% - 15px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page-jeux .container-jeux-competitif .jeux-competitif .jeux h3 {
+  font-family: clash-bold;
+  color: white;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.page-jeux .container-jeux-competitif .jeux-competitif .jeux p {
+  font-size: 16px;
+  font-family: clash-reg;
+  color: #404A9A;
+  background-color: white;
+  border-radius: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+.page-jeux .container-jeux-competitif .jeux-competitif .jeux img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.page-jeux .container-jeux-autre {
+  margin-top: 120px;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+.page-jeux .container-jeux-autre h1 {
+  font-family: clash-bold;
+  font-size: 40px;
+  color: #404A9A;
+}
+.page-jeux .container-jeux-autre h2 {
+  display: flex;
+  align-items: center;
+  font-family: clash-reg;
+  font-size: 24px;
+  color: #404A9A;
+}
+.page-jeux .container-jeux-autre h2 span {
+  width: 210px;
+  background-color: #404A9A;
+  height: 2px;
+  margin-right: 4px;
+}
+.page-jeux .container-jeux-autre .jeux-autre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.page-jeux .container-jeux-autre .jeux-autre .jeux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 50px;
+  width: calc(33.3333333333% - 20px);
+  height: 200px;
+}
+.page-jeux .container-jeux-autre .jeux-autre .jeux h3 {
+  font-family: clash-bold;
+  color: white;
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.page-jeux .container-jeux-autre .jeux-autre .jeux img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s ease;
 }
 
 /*# sourceMappingURL=app.css.map */

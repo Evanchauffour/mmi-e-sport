@@ -1,0 +1,66 @@
+.container-inscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 180px;
+  background-color: white;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-bottom: 150px;
+}
+.container-inscription h1 {
+  font-size: 32px;
+  font-family: clash-bold;
+  color: #404A9A;
+}
+.container-inscription form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.container-inscription form input {
+  border: none;
+  border-bottom: solid 2px #404A9A;
+  background-color: transparent;
+  font-family: clash-reg;
+  color: #404A9A;
+}
+.container-inscription form input:focus {
+  outline: none;
+}
+.container-inscription form label {
+  font-family: clash-reg;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #404A9A;
+  margin-right: 10px;
+}
+.container-inscription form button {
+  font-size: 20px;
+  font-family: clash-reg;
+  border: none;
+  color: #404A9A;
+  border: solid 2px #404A9A;
+  background-color: transparent;
+  width: 160px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+.container-inscription form button:hover {
+  background-color: #404A9A;
+  color: white;
+}
+.container-inscription p {
+  font-family: clash-reg;
+  font-size: 16px;
+  color: #555555;
+}
+.container-inscription p a {
+  color: #555555;
+}/*# sourceMappingURL=inscription.css.map */

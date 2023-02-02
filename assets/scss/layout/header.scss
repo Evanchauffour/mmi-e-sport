@@ -26,8 +26,34 @@ body{
     src: url(../fonts/ClashDisplay-Regular.otf);
 }
 
+.page-home{
+    header{
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    header.scroll{
+        background-color: #404A9A;
+
+        li{
+            color: white;
+            cursor: pointer;
+        }
+
+        a{
+            color: white;
+        }
+    }
+}
+
+body{
+    header{
+        background-color: #404A9A;
+    }
+}
+
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -35,6 +61,7 @@ header{
     align-items: center;
     width: 100vw;
     height: 8vw;
+    z-index: 1000;
 
     img{
         margin-left: 160px;

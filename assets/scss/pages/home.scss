@@ -1,3 +1,6 @@
+.page-home{
+    display: block;
+
 .home{
     width: 100vw;
     height: 100vh;
@@ -164,7 +167,6 @@
     justify-content: center;
     align-items: center;
     padding: 80px;
-    margin-bottom: 80px;
 
     img{
         margin-bottom: 75px;
@@ -187,4 +189,5 @@
         width: 50%;
         height: 80%;
     }
+}
 }

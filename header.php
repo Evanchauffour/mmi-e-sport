@@ -1,19 +1,4 @@
-<?php
-session_start();
-error_reporting(E_ERROR | E_PARSE);
-$user = 'mamp';
-$pass = 'root';
-try  
-{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport', $user, $pass);
-} catch (PDOException $e)
-{     print "Erreur: ". $e->getmessage() . "<br/>";
-die;
-}
-if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
-    $id=$_POST['pseudo'];
-    $mdp=$_POST['mdp'];
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,30 +10,13 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
 </head>
 <body>
     <header>
-        <img src="../mmi-e-sport/assets/img/logo.svg" alt="">
+        <a href="index.php"><img src="../mmi-e-sport/assets/img/logo.svg" alt=""></a>
             <ul>
                 <li data-page='1'>Accueil</li>
                 <li data-page='2'>Programme</li>
                 <li data-page='3'>Jeux</li>
-<<<<<<< HEAD
                 <li data-page='4'>equipes</li>
-                <li>Se connecter</li>
-=======
-                <li data-page='4'>Contact</li>
-                <?php
-                if($_SESSION['utilisateur']==''){
-                ?>
                 <li><a href="connexion.php">Se connecter</a></li>
-                <?php
-                }
-                else{
-                ?>
-                 <li><a href=""><?php echo$_SESSION['utilisateur']['nom']?></a></li>
-                 <li><a href="deco.php">Déconnexion</a></li>
-                <?php
-                }
-                ?>
->>>>>>> f9ae082982d5db49568cc24b89672400ed1248f7
             </ul>
 
     </header>

@@ -1,0 +1,136 @@
+.page-jeux{
+    display: none;
+    margin-bottom: 110px;
+    .container-jeux-competitif{
+        margin-top: calc(8vh + 120px);
+        margin-left: 160px;
+        margin-right: 160px;
+
+        h1{
+            font-family: clash-bold;
+            font-size: 40px;
+            color: #404A9A;
+        }
+
+        h2{
+            display: flex;
+            align-items: center;
+            font-family: clash-reg;
+            font-size: 24px;
+            color: #404A9A;
+
+            span{
+                width: 100px;
+                background-color: #404A9A;
+                height: 2px;
+                margin-right: 4px;
+            }
+        }
+
+        .jeux-competitif{
+            display: flex;
+            gap: 30px;
+
+            .jeux{
+                position: relative;
+                margin-top: 50px;
+                width: calc((100% / 3) - 15px);
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h3{
+                    font-family: clash-bold;
+                    color: white;
+                    font-size: 36px;
+                    margin-bottom: 10px;
+                }
+
+                p{
+                    font-size: 16px;
+                    font-family: clash-reg;
+                    color: #404A9A;
+                    background-color: white;
+                    border-radius: 2px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    cursor: pointer;
+                }
+
+                img{
+                    position: absolute;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+
+    .container-jeux-autre{
+        margin-top: calc(120px);
+        margin-left: 160px;
+        margin-right: 160px;
+
+        h1{
+            font-family: clash-bold;
+            font-size: 40px;
+            color: #404A9A;
+        }
+
+        h2{
+            display: flex;
+            align-items: center;
+            font-family: clash-reg;
+            font-size: 24px;
+            color: #404A9A;
+
+            span{
+                width: 210px;
+                background-color: #404A9A;
+                height: 2px;
+                margin-right: 4px;
+            }
+        }
+
+        .jeux-autre{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .jeux{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                margin-top: 50px;
+                width: calc((100% / 3) - 20px);
+                height: 200px;
+
+                h3{
+                    font-family: clash-bold;
+                    color: white;
+                    font-size: 36px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+
+                img{
+                    position: absolute;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}

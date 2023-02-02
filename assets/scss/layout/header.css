@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: clash-bold;
+  src: url(../fonts/ClashDisplay-Bold.ttf);
+}
+@font-face {
+  font-family: clash-semibold;
+  src: url(../fonts/ClashDisplay-Semibold.ttf);
+}
+@font-face {
+  font-family: clash-reg;
+  src: url(../fonts/ClashDisplay-Regular.otf);
+}
+.page-home header {
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.page-home header.scroll {
+  background-color: #404A9A;
+}
+.page-home header.scroll li {
+  color: white;
+}
+.page-home header.scroll a {
+  color: white;
+}
+
+body header {
+  background-color: #404A9A;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 8vw;
+  z-index: 1000;
+}
+header img {
+  margin-left: 160px;
+  width: 60px;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  margin-right: 160px;
+}
+header ul li {
+  padding-left: 40px;
+  color: #ffffff;
+  font-family: clash-semibold;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+header ul a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=header.css.map */
