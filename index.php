@@ -6,7 +6,19 @@
         <h1>ÉVÉNEMENT <br> MMI   E-SPORT</h1>
         <h2>6 AVRIL 2023<span></span>14h-20h</h2>
         <p>Rendez-vous salle “Eve” pour une expérience unique...</p>
+        <?php
+                if($_SESSION['utilisateur']==''){
+                ?>
         <a href="">Inscrivez-vous !</a>
+        <?php
+                }
+            
+                else{
+                    ?>
+                    <a href="">Découvrir</a>
+                    <?php
+                }
+                ?>
     </div>
 </div>
 <div class="sponsor">

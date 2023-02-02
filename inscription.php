@@ -1,3 +1,19 @@
+<?php
+session_start();
+error_reporting(E_ERROR | E_PARSE);
+$user = 'mamp';
+$pass = 'root';
+try  
+{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport', $user, $pass);
+} catch (PDOException $e)
+{     print "Erreur: ". $e->getmessage() . "<br/>";
+die;
+}
+if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
+    $id=$_POST['pseudo'];
+    $mdp=$_POST['mdp'];
+}
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +25,7 @@
 <div class="container-inscription">
     <div class="info-inscription">
         <h1>Inscription</h1>
-        <form action="">
+        <form action="#" method="post">
             <div class="container-input">
                 <div class="container-input_label">
                     <label for="pseudo">Pseudonyme</label>
@@ -21,11 +37,11 @@
                 </div>
                 <div class="container-input_label">
                     <label for="password">Mot de passe</label>
-                    <input type="password" name="password">
+                    <input type="password" name="motdepasse">
                 </div>
                 <div class="container-input_label">
                     <label for="confirmePassword">Confirmer mot de passe</label>
-                    <input type="password" name="confirmePassword">
+                    <input type="password" name="cmotdepasse">
                 </div>
             </div>
             <button>S'inscrire</button>
@@ -35,7 +51,41 @@
     </div>
     <a href="index.php" class="back-to-home">Retour site web...</a>
 </div>
+<?php   
+$email = $_POST['email'];
+$pseudo = $_POST['pseudo'];
+$motdepasse = $_POST['motdepasse'];
+$cmotdepasse = $_POST['cmotdepasse'];
+if($motdepasse != NULL){
+    if($motdepasse == $cmotdepasse){
+        foreach($db->query("SELECT * from univ WHERE mail = '$email'") as $row) {
+        $mail = $row['3'];
+        header("Location:index.php");
+        }
+        foreach($db->query("SELECT * from joueurs WHERE email = '$email'") as $player) {
+            $player_mail = $player['3'];
+            }
+        if($email != $player_mail){
 
+            if($email==$mail){
+                $q = $db->prepare("INSERT INTO joueurs(pseudo,email,mot_de_passe) VALUES (:pseudo,:email,:motdepasse)");
+                $q->execute([
+                    'email' => $email,
+                    'pseudo'=> $pseudo,
+                    'motdepasse' => $motdepasse
+                    ]);
+            }
+        }
+
+    }
+}
+
+else{
+    echo "<p class='inco'>Les deux mots de passe de correspondent pas.</p>";
+    }
+
+
+?>
 <?php
     require('footer.php');
 ?>
