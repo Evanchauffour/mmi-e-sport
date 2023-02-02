@@ -17,6 +17,10 @@
             <label for="password">Mot de passe</label>
             <input type="password" name="password">
         </div>
+        <div class="container-input_label">
+            <label for="confirme">Confirmer Mot de passe</label>
+            <input type="password" name="confirme">
+        </div>
         <button>Se connecter</button>
     </form>
     <p>Déjà un compte ? <span><a href="connexion.php">Connecte-toi !</a></span></p>
