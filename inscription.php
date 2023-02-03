@@ -4,7 +4,7 @@ error_reporting(E_ERROR | E_PARSE);
 $user = 'mamp';
 $pass = 'root';
 try  
-{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport', $user, $pass);
+{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport;charset=utf8', 'root', '');
 } catch (PDOException $e)
 {     print "Erreur: ". $e->getmessage() . "<br/>";
 die;
@@ -46,7 +46,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
             </div>
             <button>S'inscrire</button>
         </form>
-        <p>Pas de compte ? <span><a href="connexion.php">Inscris-toi !</a></span></p>
+        <p>Déjà un compte? <span><a href="connexion.php">Connecte-toi !</a></span></p>
         <img class="bg-connexion" src="../mmi-e-sport/assets/img/bg-connexion.svg" alt=""> 
     </div>
     <a href="index.php" class="back-to-home">Retour site web...</a>
