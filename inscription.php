@@ -60,13 +60,12 @@ if($motdepasse != NULL){
     if($motdepasse == $cmotdepasse){
         foreach($db->query("SELECT * from univ WHERE mail = '$email'") as $row) {
         $mail = $row['3'];
-        header("Location:index.php");
         }
         foreach($db->query("SELECT * from joueurs WHERE email = '$email'") as $player) {
-            $player_mail = $player['3'];
+            $player_mail = $player['2'];
             }
-        if($email != $player_mail){
 
+        if($email != $player_mail){
             if($email==$mail){
                 $q = $db->prepare("INSERT INTO joueurs(pseudo,email,mot_de_passe) VALUES (:pseudo,:email,:motdepasse)");
                 $q->execute([
@@ -74,17 +73,17 @@ if($motdepasse != NULL){
                     'pseudo'=> $pseudo,
                     'motdepasse' => $motdepasse
                     ]);
+                    header("Location:index.php");
             }
+            elseif($email!=$mail){
+                echo "<p>L'adresse mail est invalide</p>"; 
+                }
         }
-
     }
+    elseif($motdepasse != $cmotdepasse){
+        echo "<p>les deux mots de passe ne corespondent pas</p>"; 
+        }
 }
-
-else{
-    echo "<p class='inco'>Les deux mots de passe de correspondent pas.</p>";
-    }
-
-
 ?>
 <?php
     require('footer.php');

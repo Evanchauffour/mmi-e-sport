@@ -8,7 +8,7 @@
         <?php
                 if($_SESSION['utilisateur']==''){
                 ?>
-        <a href="">Inscrivez-vous !</a>
+        <a href="inscription.php">Inscrivez-vous !</a>
         <?php
                 }
             
