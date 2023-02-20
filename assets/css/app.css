@@ -5,7 +5,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: #F1F1F1;
+  background-color: white;
 }
 
 ::-webkit-scrollbar {
@@ -24,29 +24,23 @@ body {
   font-family: clash-reg;
   src: url(../fonts/ClashDisplay-Regular.otf);
 }
-.page-home header {
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-.page-home header.scroll {
+header.scroll {
   background-color: #404A9A;
 }
-.page-home header.scroll li {
+header.scroll li {
   color: white;
   cursor: pointer;
 }
-.page-home header.scroll a {
+header.scroll a {
   color: white;
 }
-.page-home header.twitch-scroll {
+
+header.twitch-scroll {
   background-color: #ffffff;
 }
 
-body header {
-  background-color: #404A9A;
-}
-
 header {
+  background-color: #404A9A;
   position: fixed;
   top: 0;
   left: 0;
@@ -54,8 +48,9 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 5vw;
+  height: 10vh;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 header img {
   margin-left: 160px;
@@ -80,6 +75,14 @@ header ul a {
   color: white;
 }
 
+@media screen and (max-width: 1024px) {
+  header img {
+    margin-left: 60px;
+  }
+  header ul {
+    margin-right: 60px;
+  }
+}
 footer {
   position: relative;
   display: flex;
@@ -89,7 +92,7 @@ footer {
   padding-bottom: 40px;
   border-top: solid #404A9A;
   z-index: 10000;
-  background-color: #F1F1F1;
+  background-color: white;
 }
 footer img {
   margin-left: 160px;
@@ -124,6 +127,23 @@ footer .info ul li:nth-child(1) {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  footer img {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  footer .info {
+    margin-right: 0;
+  }
+  footer .info ul {
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 .page-home {
   display: block;
 }
@@ -243,7 +263,7 @@ footer .info ul li:nth-child(1) {
 }
 .page-home .info-event .picture {
   width: 448px;
-  height: 330px;
+  height: auto;
   background-color: #3C4B97;
 }
 .page-home .info-event .star1 {
@@ -300,7 +320,84 @@ footer .info ul li:nth-child(1) {
   width: 50%;
   height: 80%;
 }
+.page-home .team {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+}
+.page-home .team .contain-team {
+  margin: 0 auto;
+}
+.page-home .team .contain-team h2 {
+  font-family: clash-bold;
+  font-size: 64px;
+  color: #404A9A;
+}
 
+@media screen and (max-width: 1300px) {
+  .page-home .info-event {
+    margin: 150px 100px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .page-home .home .infos {
+    left: 60px;
+  }
+  .page-home .home .infos h1 {
+    font-size: 80px;
+  }
+  .page-home .home .infos h1 br {
+    content: "";
+    display: block;
+    margin-bottom: -30px;
+  }
+  .page-home .home .infos h2 {
+    font-size: 32px;
+  }
+  .page-home .home .infos h2 span {
+    width: 220px;
+  }
+  .page-home .home .infos p {
+    font-size: 18px;
+  }
+  .page-home .home .infos a {
+    font-size: 18px;
+  }
+  .page-home .info-event .text h2 {
+    font-size: 42px;
+  }
+  .page-home .info-event .text h3 {
+    font-size: 42px;
+  }
+  .page-home .info-event .text h3 span {
+    width: 70px;
+  }
+  .page-home .team {
+    margin: 100px 50px;
+  }
+  .page-home .team .contain-team h2 {
+    font-size: 44px;
+  }
+  .page-home .team .contain-team img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-home .info-event {
+    flex-direction: column;
+  }
+  .page-home .info-event .text {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .page-home .info-event .picture {
+    width: 100%;
+    height: 300px;
+  }
+  .page-home .twitch img {
+    width: 70%;
+  }
+}
 .container-connexion {
   position: relative;
   display: flex;
@@ -572,6 +669,126 @@ footer .info ul li:nth-child(1) {
   z-index: -1;
   transition: all 0.3s ease;
 }
+.page-jeux .container-jeux-competitif .pop-up-competitive {
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 920px;
+  height: 580px;
+  background-color: white;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 40px;
+  width: calc(100% - 100px);
+  height: calc(100% - 130px);
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(50% - 20px);
+  height: 100%;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain .left img {
+  width: 100%;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain .left h3 {
+  font-family: clash-bold;
+  font-size: 24px;
+  color: #404A9A;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain .left p {
+  font-family: clash-reg;
+  font-size: 16px;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form {
+  width: calc(50% - 20px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form input {
+  border: none;
+  border-bottom: solid #404A9A;
+  background-color: transparent;
+  font-family: clash-reg;
+  font-size: 14px;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form input:focus {
+  outline: none;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form h4 {
+  font-size: 16px;
+  font-family: clash-bold;
+  text-transform: uppercase;
+  color: #404A9A;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper {
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper .upper-left {
+  width: calc(50% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper .upper-right {
+  width: calc(50% - 30px);
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper .upper-right .logo {
+  width: 100%;
+  height: 130px;
+  border: solid #404A9A;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper .upper-right .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .lower {
+  display: flex;
+  justify-content: space-between;
+  height: 70%;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .lower .lower-left {
+  width: calc(50% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .lower .lower-right {
+  width: calc(50% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .contain form button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #404A9A;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-family: clash-bold;
+  cursor: pointer;
+  color: white;
+}
+.page-jeux .container-jeux-competitif .pop-up-competitive .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
 .page-jeux .container-jeux-autre {
   margin-top: 120px;
   margin-left: 160px;
@@ -624,6 +841,119 @@ footer .info ul li:nth-child(1) {
   height: 100%;
   z-index: -1;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-jeux .container-jeux-competitif {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .page-jeux .container-jeux-competitif .jeux-competitif .jeux h3 {
+    font-family: clash-bold;
+    color: white;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .page-jeux .container-jeux-autre {
+    margin-top: 120px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .page-jeux .container-jeux-competitif .jeux-competitif {
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .page-jeux .container-jeux-competitif .jeux-competitif .jeux {
+    width: calc(50% - 15px);
+    margin-top: 0;
+  }
+  .page-jeux .container-jeux-competitif .jeux-competitif .jeux h3 {
+    font-family: clash-bold;
+    color: white;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .page-jeux .container-jeux-autre {
+    margin-top: 120px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .page-jeux .container-jeux-autre .jeux-autre {
+    margin-top: 50px;
+  }
+  .page-jeux .container-jeux-autre .jeux-autre .jeux {
+    width: calc(50% - 15px);
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-jeux .container-jeux-competitif .jeux-competitif .jeux {
+    width: 100%;
+  }
+  .page-jeux .container-jeux-autre .jeux-autre .jeux {
+    width: 100%;
+  }
+}
+.page-teams {
+  display: none;
+  margin-bottom: 110px;
+  margin-top: calc(8vh + 120px);
+  margin-left: 160px;
+  margin-right: 160px;
+}
+.page-teams h1 {
+  font-family: clash-bold;
+  font-size: 40px;
+  color: #404A9A;
+}
+.page-teams h2 {
+  display: flex;
+  align-items: center;
+  font-family: clash-reg;
+  font-size: 24px;
+  color: #404A9A;
+}
+.page-teams h2 span {
+  width: 50px;
+  background-color: #404A9A;
+  height: 2px;
+  margin-right: 4px;
+}
+.page-teams h3 {
+  font-size: 32px;
+  font-family: clash-semibold;
+  color: #404A9A;
+  margin-left: 80px;
+}
+.page-teams .carousel {
+  margin-top: 45px;
+}
+.page-teams .carousel-cell {
+  width: 160px;
+  height: 200px;
+  margin-right: 100px;
+  background: #404A9A;
+  border-radius: 5px;
+}
+.page-teams .valorant-teams {
+  margin-top: 80px;
+}
+.page-teams .rocket-teams {
+  margin-top: 120px;
+}
+.page-teams .tf2-teams {
+  margin-top: 120px;
+  margin-bottom: 150px;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-teams {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

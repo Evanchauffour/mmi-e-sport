@@ -4,7 +4,7 @@ error_reporting(E_ERROR | E_PARSE);
 $user = 'mamp';
 $pass = 'root';
 try  
-{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport;charset=utf8', 'root', '');
+{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport;charset=utf8', 'mamp', 'root');
 } catch (PDOException $e)
 {     print "Erreur: ". $e->getmessage() . "<br/>";
 die;

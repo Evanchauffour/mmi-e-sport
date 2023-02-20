@@ -17,10 +17,12 @@ links.forEach(link =>{
                     top: 0,
                     behavior: 'smooth'
                 })
+                console.log(index);
             }else{
                 pages[j].style.visibility = "hidden";
                 pages[j].style.display = "none";
             }
         }
     })
+
 })

@@ -8,27 +8,20 @@ function postionTwitch(){
     twitchPosition = twitch.offsetTop
 }
 postionTwitch()
-console.log(twitchPosition);
 
 window.addEventListener('scroll', () =>{
     var value = window.scrollY
-    if(value > 0){
-        header.classList.add('scroll');
-    }else{
-        header.classList.remove('scroll');
-    }
-
     if(value > twitchPosition){
         header.classList.add('twitch-scroll')
-        a.style.color = "#404A9A";
-        links.forEach(link =>{
+        links.forEach(link => {
             link.style.color = "#404A9A"
-        })
+        });
+        a.style.color = "#404A9A"
     }else{
         header.classList.remove('twitch-scroll')
-        a.style.color = "white";
-        links.forEach(link =>{
+        links.forEach(link => {
             link.style.color = "white"
-        })
+        });
+        a.style.color = "white"
     }
 })

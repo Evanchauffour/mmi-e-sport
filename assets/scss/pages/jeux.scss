@@ -1,6 +1,7 @@
 .page-jeux{
     display: none;
     margin-bottom: 110px;
+
     .container-jeux-competitif{
         margin-top: calc(8vh + 120px);
         margin-left: 160px;
@@ -71,6 +72,147 @@
                 }
             }
         }
+
+        .pop-up-competitive{
+            visibility: hidden;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 920px;
+            height: 580px;
+            background-color: white;
+
+            .contain{
+                display: flex;
+                justify-content: space-between;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-top: 40px;
+                width: calc(100% - 100px);
+                height: calc(100% - 130px);
+
+                .left{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: calc(50% - 20px);
+                    height: 100%;
+
+                    img{
+                        width: 100%;
+                    }
+
+                    h3{
+                        font-family: clash-bold;
+                        font-size: 24px;
+                        color: #404A9A;
+                    }
+
+                    p{
+                        font-family: clash-reg;
+                        font-size: 16px;
+                    }
+                }
+
+                form{
+                    width: calc(50% - 20px);
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 30px;
+
+                    input{
+                        border: none;
+                        border-bottom: solid #404A9A;
+                        background-color: transparent;
+                        font-family: clash-reg;
+                        font-size: 14px;
+
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+
+                    h4{
+                        font-size: 16px;
+                        font-family: clash-bold;
+                        text-transform: uppercase;
+                        color: #404A9A;
+                    }
+
+                    .upper{
+                        display: flex;
+                        justify-content: space-between;
+                        height: 30%;
+
+                        .upper-left{
+                            width: calc(50% - 30px);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+
+                        .upper-right{
+
+                            width: calc(50% - 30px);
+
+                            .logo{
+                                width: 100%;
+                                height: 130px;
+                                border: solid #404A9A;
+
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    .lower{
+                        display: flex;
+                        justify-content: space-between;
+                        height: 70%;
+
+                        .lower-left{
+                            width: calc(50% - 30px);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+
+                        .lower-right{
+                            width: calc(50% - 30px);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+                    }
+
+                    button{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        background-color: #404A9A;
+                        border: none;
+                        padding: 15px;
+                        font-size: 16px;
+                        font-family: clash-bold;
+                        cursor: pointer;
+                        color: white;
+                    }
+                }
+            }
+
+            .close{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                cursor: pointer;
+            }
+        }
     }
 
     .container-jeux-autre{
@@ -129,6 +271,83 @@
                     height: 100%;
                     z-index: -1;
                     transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .page-jeux{  
+        .container-jeux-competitif{
+            margin-left: 60px;
+            margin-right: 60px;
+                .jeux-competitif{
+                    .jeux{
+                        h3{
+                            font-family: clash-bold;
+                            color: white;
+                            font-size: 26px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+        }
+        .container-jeux-autre{
+            margin-top: calc(120px);
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .page-jeux{  
+        .container-jeux-competitif{
+                .jeux-competitif{
+                    margin-top: 50px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .jeux{
+                        width: calc(50% - 15px);
+                        margin-top: 0;
+                        h3{
+                            font-family: clash-bold;
+                            color: white;
+                            font-size: 26px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+        }
+        .container-jeux-autre{
+            margin-top: calc(120px);
+            margin-left: 60px;
+            margin-right: 60px;
+            .jeux-autre{
+                margin-top: 50px;
+                .jeux{
+                    width: calc(50% - 15px);
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .page-jeux{  
+        .container-jeux-competitif{
+                .jeux-competitif{
+                    .jeux{
+                        width: 100%;
+                    }
+                }
+        }
+        .container-jeux-autre{
+            .jeux-autre{
+                .jeux{
+                    width: 100%;
                 }
             }
         }

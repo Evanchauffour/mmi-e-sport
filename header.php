@@ -4,7 +4,7 @@ error_reporting(E_ERROR | E_PARSE);
 $user = 'mamp';
 $pass = 'root';
 try  
-{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport;charset=utf8', 'root', '');
+{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport;charset=utf8', 'mamp', 'root');
 } catch (PDOException $e)
 {     print "Erreur: ". $e->getmessage() . "<br/>";
 die;
@@ -20,18 +20,19 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site MMI Esport">
     <link rel="stylesheet" href="../mmi-e-sport/assets/css/app.css">
     <title>MMI E-SPORT</title>
     <link rel="icon" type="image/x-icon" href="../mmi-e-sport/assets/img/logo.svg">
 </head>
 <body>
     <header>
-        <img src="../mmi-e-sport/assets/img/logo.svg" alt="">
+        <a href="index.php"><img src="../mmi-e-sport/assets/img/logo.svg" alt=""></a>
             <ul>
                 <li class="link" data-page='1'>Accueil</li>
                 <li class="link" data-page='2'>Programme</li>
                 <li class="link" data-page='3'>Jeux</li>
-                <li class="link" data-page='4'>Contact</li>
+                <li class="link" data-page='4'>Equipes</li>
                 <?php
                 if($_SESSION['utilisateur']==''){
                 ?>
@@ -46,7 +47,4 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                 }
                 ?>
             </ul>
-
     </header>
-</body>
-</html>

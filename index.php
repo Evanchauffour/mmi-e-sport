@@ -1,6 +1,5 @@
-<body>
-<div class="page page-home" data-page="1">
 <?php include('header.php') ?>
+<div class="page page-home" data-page="1">
 <div class="home">
     <div class="infos">
         <h1>ÉVÉNEMENT <br> MMI   E-SPORT</h1>
@@ -43,33 +42,83 @@
 <div class="twitch">
     <img src="../mmi-e-sport/assets/img/rejoigniez.svg" alt="">
     <div class="live">
-    <iframe src="https://clips.twitch.tv/embed?clip=GleamingLazyBubbleteaWTRuck-VqjqxwFtpiXC4x_L&parent=mmi.univ-smb.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-        </div>
+    <iframe src="https://player.twitch.tv/?channel=kamet0&parent=mmi.univ-smb.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+    </div>
+</div>
+<div class="team">
+    <div class="contain-team">
+        <h2>NOTRE EQUIPE</h2>
+        <img src="../mmi-e-sport/assets/img/team-img.svg" alt="">
+    </div>
 </div>
 </div>
 
 <!-- Page jeux -->
 
 <div class="page page-jeux" data-page="3">
-<?php include('header.php') ?>
     <div class="container-jeux-competitif">
         <h1>COMPÉTITIF</h1>
         <h2><span></span>INSCRIPTION</h2>
         <div class="jeux-competitif">
             <div class="jeux">
                 <h3>Valorant</h3>
-                <p>S'inscrire</p>
+                <p class="open-competitive">S'inscrire</p>
                 <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
             </div>
             <div class="jeux">
                 <h3>Rocket League</h3>
-                <p>S'inscrire</p>
+                <p class="open-competitive">S'inscrire</p>
                 <img src="../mmi-e-sport/assets/img/rocket.svg" alt="">
             </div>
             <div class="jeux">
                 <h3>Team Fortress 2</h3>
-                <p>S'inscrire</p>
+                <p class="open-competitive">S'inscrire</p>
                 <img src="../mmi-e-sport/assets/img/team.svg" alt="">
+            </div>
+        </div>
+        <div class="pop-up-competitive">
+            <div class="contain">
+                <div class="left">
+                    <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
+                    <h3>Valorant</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
+                </div>
+                <form action="">
+                    <div class="upper">
+                        <div class="upper-left">
+                            <h4>equipe</h4>
+                            <input type="text" placeholder="Nom">
+                            <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required >
+                        </div>
+                        <div class="upper-right">
+                            <div class="logo">
+                                <img id="image" src="" alt="Votre Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower">
+                        <div class="lower-left">
+                            <h4>MEMBRES D’ÉQUIPE</h4>
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                        </div>
+                        <div class="lower-right">
+                            <h4>Pseudos</h4>
+                            <input type="text" placeholder="Pseudo">
+                            <input type="text" placeholder="Pseudo">
+                            <input type="text" placeholder="Pseudo">
+                            <input type="text" placeholder="Pseudo">
+                            <input type="text" placeholder="Pseudo">
+                        </div>
+                    </div>
+                    <button>VALIDER</button>
+                </form>
+            </div>
+            <div class="close">
+                <img src="../mmi-e-sport/assets/img/close.svg" alt="">
             </div>
         </div>
     </div>
@@ -105,5 +154,44 @@
     </div>
 </div>
 
+<!-- Page Equipe -->
+
+<div class="page page-teams" data-page="4">
+    <h1>ÉQUIPES</h1>
+    <h2><span></span>INSCRITES</h2>
+    <div class="valorant-teams">
+        <h3>VALORANT</h3>
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+        </div>
+    </div>
+    <div class="rocket-teams">
+        <h3>ROCKET LEAGUE</h3>
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+        </div>
+    </div>
+    <div class="tf2-teams">
+        <h3>TEAM FORTRESS</h3>
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+        </div>
+    </div>
+</div>
+
 <?php include('footer.php') ?>
-</body>

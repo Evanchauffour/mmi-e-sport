@@ -7,7 +7,7 @@ footer{
     padding-bottom: 40px;
     border-top: solid #404A9A;
     z-index: 10000;
-    background-color: #F1F1F1;
+    background-color: white;
 
     img{
         margin-left: 160px;
@@ -43,6 +43,24 @@ footer{
             li:nth-child(1){
                 font-family: clash-semibold;
                 margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    footer{
+        flex-direction: column;
+        img{
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+        .info{
+            margin-right: 0;
+            ul{
+                margin: 0;
+                padding-left: 30px;
+                padding-right: 30px;
             }
         }
     }

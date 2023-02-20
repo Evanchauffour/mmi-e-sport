@@ -101,7 +101,6 @@
     justify-content: space-between;
 
     .text{
-
     width: 446px;
 
     h2{
@@ -136,7 +135,7 @@
 
     .picture{
         width: 448px;
-        height: 330px;
+        height: auto;
         background-color: #3C4B97;
     }
 
@@ -200,4 +199,109 @@
         height: 80%;
     }
 }
+
+.team{
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+
+    .contain-team{
+
+        margin: 0 auto;
+
+        h2{
+            font-family: clash-bold;
+            font-size: 64px;
+            color: #404A9A;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 1300px){
+
+    .page-home{
+        .info-event{
+            margin: 150px 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .page-home{
+        .home{
+            .infos{
+                left: 60px;
+
+                h1{
+                    font-size: 80px;
+
+                    br {
+                        content: "";
+                        display: block;
+                        margin-bottom: -30px; // la taille de l'espace voulu en px, %, em, hv, pt, etc...
+                       }
+                }
+                h2{
+                    font-size: 32px;
+        
+                    span{
+                        width: 220px;
+                    }
+                }
+                p{
+                    font-size: 18px;
+                }
+                a{font-size: 18px;}
+            }
+        }
+
+        .info-event{
+            .text{
+                h2{
+                    font-size: 42px;
+                }
+                h3{
+                    font-size: 42px;
+
+                    span {
+                        width: 70px;
+                    }
+                }
+            }
+        }
+        .team{
+            margin: 100px 50px;
+            .contain-team{
+                h2 {
+                    font-size: 44px;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .page-home{
+        .info-event{
+            flex-direction: column;
+            .text{
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            .picture{
+                width: 100%;
+                height: 300px;
+            }
+        }
+        .twitch{       
+            img{
+               width: 70%;
+            }
+        }
+    }
 }

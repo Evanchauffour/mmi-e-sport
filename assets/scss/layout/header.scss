@@ -5,7 +5,7 @@
 
 body{
     overflow-x: hidden;
-    background-color: #F1F1F1;
+    background-color: white;
 }
 
 ::-webkit-scrollbar{
@@ -27,13 +27,6 @@ body{
     src: url(../fonts/ClashDisplay-Regular.otf);
 }
 
-.page-home{
-    
-    header{
-        background-color: transparent;
-        transition: all 0.3s ease;
-    }
-
     header.scroll{
         background-color: #404A9A;
 
@@ -50,15 +43,10 @@ body{
     header.twitch-scroll{
         background-color: #ffffff;
     }
-}
 
-body{
-    header{
-        background-color: #404A9A;
-    }
-}
 
 header{
+    background-color: #404A9A;
     position: fixed;
     top: 0;
     left: 0;
@@ -66,8 +54,9 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 5vw;
+    height: 10vh;
     z-index: 1000;
+    transition: all 0.3s ease;
 
     img{
         margin-left: 160px;
@@ -93,4 +82,16 @@ header{
             color: white;
         }
     }
+}
+
+@media screen and (max-width:1024px){
+    header{  
+        img{
+            margin-left: 60px;
+        }
+    
+        ul{
+            margin-right: 60px;
+        }
+}
 }
