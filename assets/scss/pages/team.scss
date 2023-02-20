@@ -1,10 +1,8 @@
 .page-teams{
-
     display: none;
     margin-bottom: 110px;
     margin-top: calc(8vh + 120px);
-    margin-left: 160px;
-    margin-right: 160px;
+    width: 100vw;
 
     h1{
         font-family: clash-bold;
@@ -36,8 +34,9 @@
 
     .carousel{
         margin-top: 45px;
+        width: 100vw;
     }
-
+    
     .carousel-cell {
         width: 160px;
         height: 200px;

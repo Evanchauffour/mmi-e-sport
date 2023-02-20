@@ -76,7 +76,12 @@ header ul li {
 }
 header ul a {
   text-decoration: none;
-  color: white;
+  padding-left: 40px;
+  color: #ffffff;
+  font-family: clash-semibold;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 header .burger {
   display: none;
@@ -643,7 +648,7 @@ footer .info ul li:nth-child(1) {
 }
 
 .page-jeux {
-  display: none;
+  display: block;
   margin-bottom: 110px;
 }
 .page-jeux .container-jeux-competitif {
@@ -941,8 +946,7 @@ footer .info ul li:nth-child(1) {
   display: none;
   margin-bottom: 110px;
   margin-top: calc(8vh + 120px);
-  margin-left: 160px;
-  margin-right: 160px;
+  width: 100vw;
 }
 .page-teams h1 {
   font-family: clash-bold;
@@ -970,6 +974,7 @@ footer .info ul li:nth-child(1) {
 }
 .page-teams .carousel {
   margin-top: 45px;
+  width: 100vw;
 }
 .page-teams .carousel-cell {
   width: 160px;

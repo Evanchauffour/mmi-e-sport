@@ -37,6 +37,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
             <button>Se connecter</button>
         </form>
         <p>Pas de compte ? <span><a href="inscription.php">Inscris-toi !</a></span></p>
+        <p><?php echo $error ?></p>
         <img class="bg-connexion" src="../mmi-e-sport/assets/img/bg-connexion.svg" alt=""> 
     </div>
     <a href="index.php" class="back-to-home">Retour site web...</a>
@@ -58,7 +59,7 @@ if($id==$user)
     
 }
 elseif($id!=''){
-    echo "<p class='inco'>L'identifiant et/ou le mode de passe est inncorect</p>";
+    $error = "L'identifiant et/ou le mode de passe est inncorect";
 }
 
 ?>

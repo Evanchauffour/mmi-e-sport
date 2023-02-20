@@ -269,6 +269,13 @@
             <div class="carousel-cell"></div>
             <div class="carousel-cell"></div>
             <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
+            <div class="carousel-cell"></div>
         </div>
     </div>
     <div class="tf2-teams">
