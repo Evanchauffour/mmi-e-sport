@@ -1,6 +1,6 @@
-const close = document.querySelector('.close');
+const buttonsClose = document.querySelectorAll('.close');
 const buttonsOpenCompetitive = document.querySelectorAll('.open-competitive');
-const popupCompetitive = document.querySelector('.pop-up-competitive');
+const popupsCompetitive = document.querySelectorAll('.pop-up-competitive');
 
 buttonsOpenCompetitive.forEach(button =>{
     button.addEventListener('click', () =>{
@@ -8,9 +8,14 @@ buttonsOpenCompetitive.forEach(button =>{
     })
 })
 
-close.addEventListener('click', () =>{
-    popupCompetitive.style.visibility = "hidden"
+buttonsClose.forEach(close =>{
+    close.addEventListener('click', () =>{
+        popupsCompetitive.forEach(popupCompetitive =>{
+            popupCompetitive.style.visibility = "hidden"
+        })
+    })
 })
+
 
    // L'image img#image
    var image = document.getElementById("image");
@@ -38,3 +43,28 @@ close.addEventListener('click', () =>{
 
        }
    } 
+
+   const linksGame = document.querySelectorAll('.open-competitive');
+   const popGame = document.querySelectorAll('.pop-up-competitive');
+   indexPop = 0;
+   
+   
+   linksGame.forEach(link =>{
+   
+       link.addEventListener('click', (e) =>{
+           console.log('test');
+           indexPop = e.target.getAttribute('data-pop');
+           console.log(index)
+           for(j = 0; j < popGame.length; j++){
+               if(popGame[j].getAttribute('data-pop') == indexPop){
+                   popGame[j].style.visibility = "visible";
+                   popGame[j].style.display = "block";
+                   console.log(index);
+               }else{
+                   popGame[j].style.visibility = "hidden";
+                   popGame[j].style.display = "none";
+               }
+           }
+       })
+   
+   })

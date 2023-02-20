@@ -47,4 +47,9 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                 }
                 ?>
             </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
     </header>

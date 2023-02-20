@@ -1,6 +1,8 @@
 const header = document.querySelector('header');
 const twitch = document.querySelector('.twitch');
 const a = document.querySelector('header li a');
+const burger = document.querySelector('.burger');
+const ul = document.querySelector('header ul');
 
 let twitchPosition;
 
@@ -24,4 +26,8 @@ window.addEventListener('scroll', () =>{
         });
         a.style.color = "white"
     }
+})
+
+burger.addEventListener('click', () =>{
+    ul.classList.toggle('active')
 })
