@@ -1,10 +1,14 @@
 const buttonsClose = document.querySelectorAll('.close');
 const buttonsOpenCompetitive = document.querySelectorAll('.open-competitive');
-const popupsCompetitive = document.querySelectorAll('.pop-up-competitive');
+const popupsCompetitive = document.querySelectorAll('.background-pop-up-competitive');
+const body = document.querySelector('body')
 
 buttonsOpenCompetitive.forEach(button =>{
     button.addEventListener('click', () =>{
-        popupCompetitive.style.visibility = "visible"
+        popupsCompetitive.forEach(popupCompetitive =>{
+            popupCompetitive.style.visibility = "visible"
+        })
+        body.style.overflowY = "hidden"
     })
 })
 
@@ -13,6 +17,7 @@ buttonsClose.forEach(close =>{
         popupsCompetitive.forEach(popupCompetitive =>{
             popupCompetitive.style.visibility = "hidden"
         })
+        body.style.overflowY = "scroll"
     })
 })
 
@@ -45,21 +50,18 @@ buttonsClose.forEach(close =>{
    } 
 
    const linksGame = document.querySelectorAll('.open-competitive');
-   const popGame = document.querySelectorAll('.pop-up-competitive');
+   const popGame = document.querySelectorAll('.background-pop-up-competitive');
    indexPop = 0;
    
    
    linksGame.forEach(link =>{
    
        link.addEventListener('click', (e) =>{
-           console.log('test');
            indexPop = e.target.getAttribute('data-pop');
-           console.log(index)
            for(j = 0; j < popGame.length; j++){
                if(popGame[j].getAttribute('data-pop') == indexPop){
                    popGame[j].style.visibility = "visible";
                    popGame[j].style.display = "block";
-                   console.log(index);
                }else{
                    popGame[j].style.visibility = "hidden";
                    popGame[j].style.display = "none";

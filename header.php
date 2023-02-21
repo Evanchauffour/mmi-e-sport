@@ -31,7 +31,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
             <ul>
                 <li class="link" data-page='1'>Accueil</li>
                 <li class="link" data-page='2'>Programme</li>
-                <a href="jeux.php">Jeux</a>
+                <li class="link" data-page='3'>Jeux</li>
                 <li class="link" data-page='4'>Equipes</li>
                 <?php
                 if($_SESSION['utilisateur']==''){

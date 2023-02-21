@@ -122,6 +122,10 @@ header .burger span {
     padding-left: 0;
     padding: 20px;
   }
+  header ul a {
+    padding-left: 0;
+    padding: 20px;
+  }
   header .burger {
     display: flex;
     flex-direction: column;
@@ -648,7 +652,7 @@ footer .info ul li:nth-child(1) {
 }
 
 .page-jeux {
-  display: block;
+  display: none;
   margin-bottom: 110px;
 }
 .page-jeux .container-jeux-competitif {
@@ -714,8 +718,17 @@ footer .info ul li:nth-child(1) {
   z-index: -1;
   transition: all 0.3s ease;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive {
   visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+}
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -724,7 +737,7 @@ footer .info ul li:nth-child(1) {
   height: 580px;
   background-color: white;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain {
   display: flex;
   justify-content: space-between;
   margin-left: 50px;
@@ -733,90 +746,90 @@ footer .info ul li:nth-child(1) {
   width: calc(100% - 100px);
   height: calc(100% - 130px);
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain .left {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: calc(50% - 20px);
   height: 100%;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain .left img {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left img {
   width: 100%;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain .left h3 {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left h3 {
   font-family: clash-bold;
   font-size: 24px;
   color: #404A9A;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain .left p {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left p {
   font-family: clash-reg;
   font-size: 16px;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form {
   width: calc(50% - 20px);
   height: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form input {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form input {
   border: none;
   border-bottom: solid #404A9A;
   background-color: transparent;
   font-family: clash-reg;
   font-size: 14px;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form input:focus {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form input:focus {
   outline: none;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form h4 {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form h4 {
   font-size: 16px;
   font-family: clash-bold;
   text-transform: uppercase;
   color: #404A9A;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .upper {
   display: flex;
   justify-content: space-between;
   height: 30%;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper .upper-left {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .upper .upper-left {
   width: calc(50% - 30px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper .upper-right {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .upper .upper-right {
   width: calc(50% - 30px);
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper .upper-right .logo {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .upper .upper-right .logo {
   width: 100%;
   height: 130px;
   border: solid #404A9A;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .upper .upper-right .logo img {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .upper .upper-right .logo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .lower {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .lower {
   display: flex;
   justify-content: space-between;
   height: 70%;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .lower .lower-left {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .lower .lower-left {
   width: calc(50% - 30px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form .lower .lower-right {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .lower .lower-right {
   width: calc(50% - 30px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .contain form button {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form button {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -828,7 +841,7 @@ footer .info ul li:nth-child(1) {
   cursor: pointer;
   color: white;
 }
-.page-jeux .container-jeux-competitif .pop-up-competitive .close {
+.page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -943,10 +956,12 @@ footer .info ul li:nth-child(1) {
   }
 }
 .page-teams {
+  position: relative;
   display: none;
   margin-bottom: 110px;
   margin-top: calc(8vh + 120px);
-  width: 100vw;
+  margin-left: 160px;
+  margin-right: 160px;
 }
 .page-teams h1 {
   font-family: clash-bold;
@@ -974,7 +989,7 @@ footer .info ul li:nth-child(1) {
 }
 .page-teams .carousel {
   margin-top: 45px;
-  width: 100vw;
+  width: 80vw;
 }
 .page-teams .carousel-cell {
   width: 160px;

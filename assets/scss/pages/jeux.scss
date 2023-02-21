@@ -1,5 +1,5 @@
 .page-jeux{
-    display: block;
+    display: none;
     margin-bottom: 110px;
 
     .container-jeux-competitif{
@@ -72,9 +72,17 @@
                 }
             }
         }
+        .background-pop-up-competitive{
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(0, 0, 0, 0.5);
+            z-index: 10000;
 
         .pop-up-competitive{
-            visibility: hidden;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -213,6 +221,7 @@
                 cursor: pointer;
             }
         }
+    }
     }
 
     .container-jeux-autre{
