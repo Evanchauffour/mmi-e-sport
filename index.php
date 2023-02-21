@@ -53,6 +53,52 @@
 </div>
 </div>
 
+<!-- Page Programme -->
+
+<div class="page page-programme" data-page="2">
+    <div class="container-espaces">
+        <h1>les espaces</h1>
+        <h2><span></span>lesquels ?</h2>
+        <div class="contain-espaces">
+            <div class="espace">
+                <div class="infos">
+                    <h3>un espace de détente</h3>
+                    <p>Retrouver un espace convivial avec des jeux de salons phares comme Mario Kart, Just Dance et plein d'autres encore !</p>
+                </div>
+                <img src="../mmi-e-sport/assets/img/detente.svg" alt="">
+            </div>
+            <div class="espace">
+                <div class="infos">
+                    <h3>un espace compétitif</h3>
+                    <p>Là où se passera les différents matchs compétitifs, Smash Bros, Rocket League… et bien évidemment les matchs du tournoi Valorant MMI.</p>
+                </div>
+                <img src="../mmi-e-sport/assets/img/compete.svg" alt="">
+            </div>
+            <div class="espace">
+                <div class="infos">
+                    <h3>un espace réalité virtuelle</h3>
+                    <p>Plongez dans le futur du jeux vidéo et des innovations technologiques à travers une expérience de simulation de vol.</p>
+                </div>
+                <img src="../mmi-e-sport/assets/img/espace-vr.svg" alt="">
+            </div>
+            <div class="espace">
+                <div class="infos">
+                    <h3>un espace arcade</h3>
+                    <p>Revivez les années 80 et le plaisir des jeux “retrogaming” entre a-mmi’s    =)</p>
+                </div>
+                <img src="../mmi-e-sport/assets/img/arcade.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container-programme">
+        <h1>PROGRAMME</h1>
+        <h2><span></span>DE LA JOURNÉE</h2>
+        <div class="programme">
+            <h3>À VENIR</h3>
+        </div>
+    </div>
+</div>
+
 <!-- Page Jeux -->
 
 <div class="page page-jeux" data-page="3">
@@ -253,46 +299,102 @@
 <!-- Page Equipe -->
 
 <div class="page page-teams" data-page="4">
+    <div class="myEquipe">
+        <div class="head-myEquipe">
+            <h3>MES ÉQUIPES</h3>
+        </div>
+        <div class="infos-myEquipe">
+            <div class="jeu">
+                <div class="head-jeu">
+                    <h4>Valorant</h4>
+                    <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
+                </div>
+                <div class="contain-jeu">
+                    <p>f</p>
+                    <p>vsdv</p>
+                    <p>dsvsdv</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <h1>ÉQUIPES</h1>
     <h2><span></span>INSCRITES</h2>
     <div class="valorant-teams">
         <h3>VALORANT</h3>
-        <div class="carousel" data-flickity='{ "groupCells": true }'>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
+        <div class="container-card">
+        <!-- div foreach -->
+        <div class="carousel">
+                <div class="spin-container">
+                    <div class="front">
+                        <div class="contain-front">
+                            <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                            <h3>team</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <h3>Players</h3>
+                        <ul>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="rocket-teams">
         <h3>ROCKET LEAGUE</h3>
-        <div class="carousel" data-flickity='{ "groupCells": true }'>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
+        <div class="container-card">
+        <!-- div foraach -->
+        <div class="carousel">
+                <div class="spin-container">
+                    <div class="front">
+                        <div class="contain-front">
+                            <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                            <h3>team</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <h3>Players</h3>
+                        <ul>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
         </div>
     </div>
     <div class="tf2-teams">
         <h3>TEAM FORTRESS</h3>
-        <div class="carousel" data-flickity='{ "groupCells": true }'>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
+        <div class="container-card">
+            <!-- div pour foreach -->
+            <div class="carousel">
+                <div class="spin-container">
+                    <div class="front">
+                        <div class="contain-front">
+                            <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                            <h3>team</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <h3>Players</h3>
+                        <ul>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                            <li>joueurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

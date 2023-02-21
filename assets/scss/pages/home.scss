@@ -201,9 +201,11 @@
 }
 
 .team{
-    margin: 100px auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     .contain-team{
 

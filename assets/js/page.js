@@ -6,6 +6,7 @@ index = 0;
 links.forEach(link =>{
 
     link.addEventListener('click', (e) =>{
+        ul.classList.remove('active')
         console.log('test');
         index = e.target.getAttribute('data-page');
         console.log(index)

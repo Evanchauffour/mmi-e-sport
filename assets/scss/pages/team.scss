@@ -6,6 +6,64 @@
     margin-left: 160px;
     margin-right: 160px;
 
+    .myEquipe{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #404A9A;
+        margin-bottom: 100px;
+        .head-myEquipe{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            width: 100%;
+
+            h3{
+                color: white;
+                font-family: clash-semibold;
+                font-size: 32px;
+                margin-left: 20px;
+            }
+        }
+        .infos-myEquipe{
+            display: flex;
+            align-items: center;
+            height: 80%;
+            width: 100%;
+            .jeu{
+                background-color: #404A9A;
+                display: flex;
+                flex-direction: column;
+                width: calc(100% / 3);
+                height: 100%;
+                border-right: solid white;
+                .head-jeu{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    width: 100%;
+                    height: 90px;
+                    overflow: hidden;
+                    h4{
+                        color: white;
+                        font-size: 32px;
+                        font-family: clash-semibold;
+                        z-index: 10;
+                        position: relative;
+                    }
+                    img{
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
     h1{
         font-family: clash-bold;
         font-size: 40px;
@@ -34,18 +92,102 @@
         margin-left: 80px;
     }
 
+    .container-card{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        border-top: solid #404A9A;
+        row-gap: 30px;
+    }
+
     .carousel{
-        margin-top: 45px;
-        width: 80vw;
-    }
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+
+      .carousel:hover .spin-container{
+        transform: rotateY(180deg);
+      }
+      
+      .spin-container {
+        width: 256px;
+        height: 338px;
+        position: relative;
+        transition: transform 0.6s ease-in-out;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        background-color: #404A9A;
+      }
     
-    .carousel-cell {
-        width: 160px;
-        height: 200px;
-        margin-right: 100px;
-        background: #404A9A;
-        border-radius: 5px;
-    }
+    .spin-container.active {
+        transform: rotateY(180deg);
+      }
+      
+      .front, .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+      }
+
+      .front{
+        width: 100%;
+        height: 100%;
+        .contain-front{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            left: 100%;
+            transform-style: preserve-3d;
+
+            img{
+                transform: translateZ(20px);
+            }
+
+            h3{
+                color: white;
+                margin-left: 0;
+                font-size: 32px;
+                text-transform: uppercase;
+                transform: translateZ(50px);
+            }
+        }
+      }
+
+      .back {
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: white;
+        transform-style: preserve-3d;
+        border: solid #404A9A;
+
+        h3{
+            color: #404A9A;
+            margin-left: 0;
+            font-size: 32px;
+            text-transform: uppercase;
+            transform: translateZ(50px);
+        }
+        ul{
+            transform: translateZ(50px);
+            li{
+                list-style: none;
+                color: #404A9A;
+                font-size: 20px;
+                text-transform: uppercase;
+                font-family: clash-semibold;
+            }
+        }
+      }
 
     .valorant-teams{
         margin-top: 80px;
