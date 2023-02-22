@@ -1,17 +1,3 @@
-<?php
-$user = 'mamp';
-$pass = 'root';
-try  
-{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport;charset=utf8', 'mamp', 'root');
-} catch (PDOException $e)
-{     print "Erreur: ". $e->getmessage() . "<br/>";
-die;
-}
-if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
-    $id=$_POST['pseudo'];
-    $mdp=$_POST['mdp'];
-}
-?>  
 <?php include('header.php') ?>
 <div class="page page-home" data-page="1">
 <div class="home">
@@ -122,18 +108,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
         <div class="jeux-competitif">
             <div class="jeux">
                 <h3>Valorant</h3>
-                <?php
-                if($_SESSION['utilisateur']==''){
-                ?>
-                <a href="connexion.php">Se connecter</a>
-                <?php
-                }
-                else{
-                ?>
-                 <p class="open-competitive" data-pop="1">S'inscrire</p>
-                <?php
-                }
-                ?>
+                <p class="open-competitive" data-pop="1">S'inscrire</p>
                 <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
             </div>
             <div class="jeux">
@@ -155,127 +130,39 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                     <h3>Valorant</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
                 </div>
-                <form action="#" method="post">
+                <form action="">
                     <div class="upper">
                         <div class="upper-left">
                             <h4>equipe</h4>
-                            <input type="text" placeholder="Nom" name="nom">
-                            <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required >
+                            <input type="text" placeholder="Nom">
+                            <label for="file-upload1" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
+                            <input id="file-upload1" type="file" name="picture" onchange="previewPicture1(this)" accept=".jpg, .png, .gif" />
                         </div>
                         <div class="upper-right">
                             <div class="logo">
-                                <img id="image" src="" alt="Votre Logo">
+                                <img id="imagevalo" src="">
+                                <!-- <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required > -->
                             </div>
                         </div>
                     </div>
                     <div class="lower">
                         <div class="lower-left">
                             <h4>MEMBRES D’ÉQUIPE</h4>
-                            <input type="email" placeholder="Mail Universitaire" name="mail1">
-                            <input type="email" placeholder="Mail Universitaire" name="mail2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail3">
-                            <input type="email" placeholder="Mail Universitaire" name="mail4">
-                            <input type="email" placeholder="Mail Universitaire" name="mail5">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
                         </div>
+
                     </div>
-                    <button>VALIDER</button>
+                    <input type="submit" value="Valider" class="button">
                 </form>
             </div>
             <div class="close">
                 <img src="../mmi-e-sport/assets/img/close.svg" alt="">
             </div>
         </div>
-
-        <?php
-$nom_create = $_POST['nom'];
-$mail1 = $_POST['mail1'];
-$mail2 = $_POST['mail2'];
-$mail3 = $_POST['mail3'];
-$mail4 = $_POST['mail4'];   
-$mail5 = $_POST['mail5'];
-if($nom_create != NULL){
-    foreach($db->query("SELECT * FROM equipes INNER JOIN jeux ON equipes.jeu_id = jeux.id WHERE jeux.nom = 'valorant'") as $row) {
-        $team_valo_name = $row['1'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail1'") as $player1) {
-        $player1_id = $player1['0'];
-        $player1_name = $player1['1'];
-        $player1_mail = $player1['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail2'") as $player2) {
-        $player2_id = $player2['0'];
-        $player2_name = $player2['1'];
-        $player2_mail = $player2['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail3'") as $player3) {
-        $player3_id = $player3['0'];
-        $player3_name = $player3['1'];
-        $player3_mail = $player3['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail4'") as $player4) {
-        $player4_id = $player4['0'];
-        $player4_name = $player4['1'];
-        $player4_mail = $player4['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail5'") as $player5) {
-        $player5_id = $player5['0'];
-        $player5_name = $player5['1'];
-        $player5_mail = $player5['2'];
-        }
-    if($nom_create != $team_valo_name){       
-                if($mail1 == $player1_mail){
-                    if($mail2 == $player2_mail){
-                        if($mail3 == $player3_mail){
-                            if($mail4 == $player4_mail){
-                                if($mail5 == $player5_mail){
-                                            $q = $db->prepare("INSERT INTO equipes(nom,jeu_id,chef) VALUES (:nom,:jeu_id,:chef)");
-                                            $q->execute([
-                                                'nom' => $nom_create,
-                                                'jeu_id'=> 1,
-                                                'chef' => $mail1
-                                                ]);
-                                                foreach($db->query("SELECT * from equipes WHERE chef = '$mail1'") as $equipes){
-                                                    $id_equipev = $equipes['0'];
-                                                    }
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player1_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player2_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player3_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                        $i->execute([
-                                        'idplayer' => $player4_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player5_id,
-                                        'idteam'=> $id_equipev,
-                                        ]);   
-                                }
-                            }
-                        }
-                    }   
-                }
-        else{
-            echo "<p>Veuillez rentrez tout les champs</p>";
-        }
-    }
-    elseif($team_valo_name==$nom_create){
-            echo "<p>Le nom d'équipe est déjà utilisé</p>";
-    }
-} 
-?>
 </div>
         <div class="background-pop-up-competitive" data-pop="2">
             <div class="pop-up-competitive">
@@ -285,94 +172,33 @@ if($nom_create != NULL){
                         <h3>Rocket Leagues</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
                     </div>
-                    <form action="#" method="post">
+                    <form action="">
                         <div class="upper">
                             <div class="upper-left">
                                 <h4>equipe</h4>
-                                <input type="text" placeholder="Nom" name="nomr">
-                                <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required >
+                                <input type="text" placeholder="Nom">
+                                <label for="file-upload2" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
+                                <input id="file-upload2" type="file" name="picture" onchange="previewPicture2(this)" accept=".jpg, .png, .gif" />
                             </div>
                             <div class="upper-right">
                                 <div class="logo">
-                                    <img id="image" src="" alt="Votre Logo">
+                                    <img id="imagerocket" src="">
                                 </div>
                             </div>
                         </div>
                         <div class="lower">
                             <div class="lower-left">
-                            <h4>MEMBRES D’ÉQUIPE</h4>
-                            <input type="email" placeholder="Mail Universitaire" name="mail1r">
-                            <input type="email" placeholder="Mail Universitaire" name="mail2r">
-                            <input type="email" placeholder="Mail Universitaire" name="mail3r">
+                                <h4>MEMBRES D’ÉQUIPE</h4>
+                                <input type="email" placeholder="Mail Universitaire">
+                                <input type="email" placeholder="Mail Universitaire">
+                                <input type="email" placeholder="Mail Universitaire">
+                                <input type="email" placeholder="Mail Universitaire">
+                                <input type="email" placeholder="Mail Universitaire">
                             </div>
                         </div>
-                        <button>VALIDER</button>
+                        <input type="submit" value="Valider" class="button">
                     </form>
                 </div>
-                <?php
-$nom_create = $_POST['nomr'];
-$mail1 = $_POST['mail1r'];
-$mail2 = $_POST['mail2r'];
-$mail3 = $_POST['mail3r'];
-if($nom_create != NULL){
-    foreach($db->query("SELECT * FROM equipes INNER JOIN jeux ON equipes.jeu_id = jeux.id WHERE jeux.nom = 'rocket'") as $row) {
-        $team_valo_name = $row['1'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail1'") as $player1) {
-        $player1_id = $player1['0'];
-        $player1_name = $player1['1'];
-        $player1_mail = $player1['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail2'") as $player2) {
-        $player2_id = $player2['0'];
-        $player2_name = $player2['1'];
-        $player2_mail = $player2['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail3'") as $player3) {
-        $player3_id = $player3['0'];
-        $player3_name = $player3['1'];
-        $player3_mail = $player3['2'];
-        }
-    if($nom_create != $team_valo_name){       
-                if($mail1 == $player1_mail){
-                    if($mail2 == $player2_mail){
-                        if($mail3 == $player3_mail){
-                                            $q = $db->prepare("INSERT INTO equipes(nom,jeu_id,chef) VALUES (:nom,:jeu_id,:chef)");
-                                            $q->execute([
-                                                'nom' => $nom_create,
-                                                'jeu_id'=> 2,
-                                                'chef' => $mail1
-                                                ]);
-                                                foreach($db->query("SELECT * from equipes WHERE chef = '$mail1'") as $equipes){
-                                                    $id_equipev = $equipes['0'];
-                                                    }
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player1_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player2_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player3_id,
-                                        'idteam'=> $id_equipev,
-                                        ]);   
-                        }
-                    }   
-                }
-        else{
-            echo "<p>Veuillez rentrez tout les champs</p>";
-        }
-    }
-    elseif($team_valo_name==$nom_create){
-            echo "<p>Le nom d'équipe est déjà utilisé</p>";
-    }
-} 
-?>
                 <div class="close">
                     <img src="../mmi-e-sport/assets/img/close.svg" alt="">
                 </div>
@@ -386,132 +212,33 @@ if($nom_create != NULL){
                     <h3>Team fortress</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
                 </div>
-                <form action="#" method="post">
+                <form action="">
                     <div class="upper">
                         <div class="upper-left">
                             <h4>equipe</h4>
-                            <input type="text" placeholder="Nom" name="nomtf2">
-                            <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required >
+                            <input type="text" placeholder="Nom">
+                            <label for="file-upload3" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
+                            <input id="file-upload3" type="file" name="picture" onchange="previewPicture3(this)" accept=".jpg, .png, .gif" />
                         </div>
                         <div class="upper-right">
                             <div class="logo">
-                                <img id="image" src="" alt="Votre Logo">
+                                <img id="imageteam" src="">
                             </div>
                         </div>
                     </div>
                     <div class="lower">
                         <div class="lower-left">
                             <h4>MEMBRES D’ÉQUIPE</h4>
-                            <input type="email" placeholder="Mail Universitaire" name="mail1tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail2tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail3tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail4tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail5tf2">
-                        </div>
-                        <div class="lower-right">
-                            <h4>Pseudos</h4>
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
                         </div>
                     </div>
-                    <button>VALIDER</button>
+                    <input type="submit" value="Valider" class="button">
                 </form>
             </div>
-
-            <?php
-$nom_create = $_POST['nomtf2'];
-$mail1 = $_POST['mail1tf2'];
-$mail2 = $_POST['mail2tf2'];
-$mail3 = $_POST['mail3tf2'];
-$mail4 = $_POST['mail4tf2'];   
-$mail5 = $_POST['mail5tf2'];
-if($nom_create != NULL){
-    foreach($db->query("SELECT * FROM equipes INNER JOIN jeux ON equipes.jeu_id = jeux.id WHERE jeux.nom = 'tf2'") as $row) {
-        $team_valo_name = $row['1'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail1'") as $player1) {
-        $player1_id = $player1['0'];
-        $player1_name = $player1['1'];
-        $player1_mail = $player1['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail2'") as $player2) {
-        $player2_id = $player2['0'];
-        $player2_name = $player2['1'];
-        $player2_mail = $player2['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail3'") as $player3) {
-        $player3_id = $player3['0'];
-        $player3_name = $player3['1'];
-        $player3_mail = $player3['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail4'") as $player4) {
-        $player4_id = $player4['0'];
-        $player4_name = $player4['1'];
-        $player4_mail = $player4['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail5'") as $player5) {
-        $player5_id = $player5['0'];
-        $player5_name = $player5['1'];
-        $player5_mail = $player5['2'];
-        }
-    if($nom_create != $team_valo_name){       
-                if($mail1 == $player1_mail){
-                    if($mail2 == $player2_mail){
-                        if($mail3 == $player3_mail){
-                            if($mail4 == $player4_mail){
-                                if($mail5 == $player5_mail){
-                                            $q = $db->prepare("INSERT INTO equipes(nom,jeu_id,chef) VALUES (:nom,:jeu_id,:chef)");
-                                            $q->execute([
-                                                'nom' => $nom_create,
-                                                'jeu_id'=> 3,
-                                                'chef' => $mail1
-                                                ]);
-                                                foreach($db->query("SELECT * from equipes WHERE chef = '$mail1'") as $equipes){
-                                                    $id_equipev = $equipes['0'];
-                                                    }
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player1_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player2_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player3_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                        $i->execute([
-                                        'idplayer' => $player4_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player5_id,
-                                        'idteam'=> $id_equipev,
-                                        ]);   
-                                }
-                            }
-                        }
-                    }   
-                }
-        else{
-            echo "<p>Veuillez rentrez tout les champs</p>";
-        }
-    }
-    elseif($team_valo_name==$nom_create){
-            echo "<p>Le nom d'équipe est déjà utilisé</p>";
-    }
-} 
-?>
-
             <div class="close">
                 <img src="../mmi-e-sport/assets/img/close.svg" alt="">
             </div>
