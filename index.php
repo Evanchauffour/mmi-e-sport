@@ -135,11 +135,13 @@
                         <div class="upper-left">
                             <h4>equipe</h4>
                             <input type="text" placeholder="Nom">
-                            <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required >
+                            <label for="file-upload1" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
+                            <input id="file-upload1" type="file" name="picture" onchange="previewPicture1(this)" accept=".jpg, .png, .gif" />
                         </div>
                         <div class="upper-right">
                             <div class="logo">
-                                <img id="image" src="" alt="Votre Logo">
+                                <img id="imagevalo" src="">
+                                <!-- <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required > -->
                             </div>
                         </div>
                     </div>
@@ -152,16 +154,9 @@
                             <input type="email" placeholder="Mail Universitaire">
                             <input type="email" placeholder="Mail Universitaire">
                         </div>
-                        <div class="lower-right">
-                            <h4>Pseudos</h4>
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                        </div>
+
                     </div>
-                    <button>VALIDER</button>
+                    <input type="submit" value="Valider" class="button">
                 </form>
             </div>
             <div class="close">
@@ -182,11 +177,12 @@
                             <div class="upper-left">
                                 <h4>equipe</h4>
                                 <input type="text" placeholder="Nom">
-                                <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required >
+                                <label for="file-upload2" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
+                                <input id="file-upload2" type="file" name="picture" onchange="previewPicture2(this)" accept=".jpg, .png, .gif" />
                             </div>
                             <div class="upper-right">
                                 <div class="logo">
-                                    <img id="image" src="" alt="Votre Logo">
+                                    <img id="imagerocket" src="">
                                 </div>
                             </div>
                         </div>
@@ -199,16 +195,8 @@
                                 <input type="email" placeholder="Mail Universitaire">
                                 <input type="email" placeholder="Mail Universitaire">
                             </div>
-                            <div class="lower-right">
-                                <h4>Pseudos</h4>
-                                <input type="text" placeholder="Pseudo">
-                                <input type="text" placeholder="Pseudo">
-                                <input type="text" placeholder="Pseudo">
-                                <input type="text" placeholder="Pseudo">
-                                <input type="text" placeholder="Pseudo">
-                            </div>
                         </div>
-                        <button>VALIDER</button>
+                        <input type="submit" value="Valider" class="button">
                     </form>
                 </div>
                 <div class="close">
@@ -229,11 +217,12 @@
                         <div class="upper-left">
                             <h4>equipe</h4>
                             <input type="text" placeholder="Nom">
-                            <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required >
+                            <label for="file-upload3" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
+                            <input id="file-upload3" type="file" name="picture" onchange="previewPicture3(this)" accept=".jpg, .png, .gif" />
                         </div>
                         <div class="upper-right">
                             <div class="logo">
-                                <img id="image" src="" alt="Votre Logo">
+                                <img id="imageteam" src="">
                             </div>
                         </div>
                     </div>
@@ -246,16 +235,8 @@
                             <input type="email" placeholder="Mail Universitaire">
                             <input type="email" placeholder="Mail Universitaire">
                         </div>
-                        <div class="lower-right">
-                            <h4>Pseudos</h4>
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                            <input type="text" placeholder="Pseudo">
-                        </div>
                     </div>
-                    <button>VALIDER</button>
+                    <input type="submit" value="Valider" class="button">
                 </form>
             </div>
             <div class="close">
@@ -310,9 +291,18 @@
                     <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
                 </div>
                 <div class="contain-jeu">
-                    <p>f</p>
-                    <p>vsdv</p>
-                    <p>dsvsdv</p>
+                    <h5>Nom d’équipe</h5>
+                    <h6>LA TEAM DES FOUS</h6>
+                    <div class="container-joueurs">
+                        <h5>Joueurs</h5>
+                        <ul>
+                            <li>teregkoe</li>
+                            <li>ipjip</li>
+                            <li>pijipjiop</li>
+                            <li>ijijiij</li>
+                            <li>ijijiji</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -322,79 +312,161 @@
     <div class="valorant-teams">
         <h3>VALORANT</h3>
         <div class="container-card">
-        <!-- div foreach -->
-        <div class="carousel">
-                <div class="spin-container">
-                    <div class="front">
-                        <div class="contain-front">
-                            <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
-                            <h3>team</h3>
+            <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="back">
-                        <h3>Players</h3>
-                        <ul>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                        </ul>
+                </div>
+            <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
         </div>
     </div>
+
+
     <div class="rocket-teams">
         <h3>ROCKET LEAGUE</h3>
         <div class="container-card">
-        <!-- div foraach -->
-        <div class="carousel">
-                <div class="spin-container">
-                    <div class="front">
-                        <div class="contain-front">
-                            <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
-                            <h3>team</h3>
+            <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="back">
-                        <h3>Players</h3>
-                        <ul>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                        </ul>
+                </div>
+            <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>  
         </div>
     </div>
+
+
     <div class="tf2-teams">
         <h3>TEAM FORTRESS</h3>
         <div class="container-card">
-            <!-- div pour foreach -->
             <div class="carousel">
-                <div class="spin-container">
-                    <div class="front">
-                        <div class="contain-front">
-                            <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
-                            <h3>team</h3>
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="back">
-                        <h3>Players</h3>
-                        <ul>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                            <li>joueurs</li>
-                        </ul>
+                </div>
+            <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>

@@ -65,3 +65,18 @@ footer{
         }
     }
 }
+
+@media screen and (max-width: 375px) {
+    footer{
+        flex-direction: column;
+        .info{
+            margin-right: 0;
+            ul{
+                margin: 0;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+            }
+        }
+    }
+}

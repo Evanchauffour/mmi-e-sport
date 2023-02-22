@@ -27,11 +27,11 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
         <h1>Connexion</h1>
         <form action="#" method="post">
             <div class="container-input_label">
-                <label for="email">Mail universitaire</label>
+                <label for="email">Mail universitaire :</label>
                 <input type="email" name="email">
             </div>
             <div class="container-input_label">
-                <label for="password">Mot de passe</label>
+                <label for="password">Mot de passe :</label>
                 <input type="password" name="motdepasse">
             </div>
             <button>Se connecter</button>

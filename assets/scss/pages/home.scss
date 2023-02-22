@@ -274,7 +274,7 @@
             }
         }
         .team{
-            margin: 100px 50px;
+            margin: 0 50px;
             .contain-team{
                 h2 {
                     font-size: 44px;
@@ -303,6 +303,75 @@
         .twitch{       
             img{
                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .page-home{
+        .home{
+            .infos{
+                left: 30px;
+
+                h1{
+                    font-size: 40px;
+
+                    br {
+                        content: "";
+                        display: block;
+                        margin-bottom: -14px; // la taille de l'espace voulu en px, %, em, hv, pt, etc...
+                       }
+                }
+                h2{
+                    font-size: 20px;
+        
+                    span{
+                        width: 70px;
+                    }
+                }
+                p{
+                    font-size: 14px;
+                }
+                a{font-size: 14px;}
+            }
+        }
+
+        .info-event{
+            margin: 100px 30px;
+            .text{
+                h2{
+                    font-size: 30px;
+                }
+                h3{
+                    font-size: 20px;
+
+                    span {
+                        width: 90px;
+                    }
+                }
+            }
+        }
+        .twitch{   
+            
+            img{
+                width: 100%;
+            }
+            .live{
+                width: 310px;
+            }
+        }
+        .team{
+            margin: 0 30px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .contain-team{
+                h2 {
+                    font-size: 40px;
+                }
+                img{
+                    width: 100%;
+                }
             }
         }
     }

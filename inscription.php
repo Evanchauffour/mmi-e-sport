@@ -28,19 +28,19 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
         <form action="#" method="post">
             <div class="container-input">
                 <div class="container-input_label">
-                    <label for="pseudo">Pseudonyme</label>
+                    <label for="pseudo">Pseudonyme :</label>
                     <input type="text" name="pseudo">
                 </div>
                 <div class="container-input_label">
-                    <label for="email">Mail universitaire</label>
+                    <label for="email">Mail universitaire :</label>
                     <input type="email" name="email">
                 </div>
                 <div class="container-input_label">
-                    <label for="password">Mot de passe</label>
+                    <label for="password">Mot de passe :</label>
                     <input type="password" name="motdepasse">
                 </div>
                 <div class="container-input_label">
-                    <label for="confirmePassword">Confirmer mot de passe</label>
+                    <label for="confirmePassword">Confirmer mot de passe :</label>
                     <input type="password" name="cmotdepasse">
                 </div>
             </div>

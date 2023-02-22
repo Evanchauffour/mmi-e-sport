@@ -21,12 +21,11 @@ buttonsClose.forEach(close =>{
     })
 })
 
-
    // L'image img#image
-   var image = document.getElementById("image");
+   var imagevalo = document.getElementById("imagevalo");
      
    // La fonction previewPicture
-   var previewPicture  = function (e) {
+   var previewPicture1  = function (e) {
 
        // e.files contient un objet FileList
        const [picture] = e.files
@@ -40,11 +39,68 @@ buttonsClose.forEach(close =>{
            // L'événement déclenché lorsque la lecture est complète
            reader.onload = function (e) {
                // On change l'URL de l'image (base64)
-               image.src = e.target.result
+               imagevalo.src = e.target.result
            }
 
            // On lit le fichier "picture" uploadé
            reader.readAsDataURL(picture)
+           picture.style.display = "block"
+
+       }
+   } 
+
+      // L'image img#image
+      var imagerocket = document.getElementById("imagerocket");
+     
+      // La fonction previewPicture
+      var previewPicture2  = function (e) {
+   
+          // e.files contient un objet FileList
+          const [picture] = e.files
+   
+          // "picture" est un objet File
+          if (picture) {
+   
+              // L'objet FileReader
+              var reader = new FileReader();
+   
+              // L'événement déclenché lorsque la lecture est complète
+              reader.onload = function (e) {
+                  // On change l'URL de l'image (base64)
+                  imagerocket.src = e.target.result
+              }
+   
+              // On lit le fichier "picture" uploadé
+              reader.readAsDataURL(picture)
+              picture.style.display = "block"
+   
+          }
+      } 
+
+         // L'image img#image
+   var imageteam = document.getElementById("imageteam");
+     
+   // La fonction previewPicture
+   var previewPicture3  = function (e) {
+
+       // e.files contient un objet FileList
+       const [picture] = e.files
+
+       // "picture" est un objet File
+       if (picture) {
+
+           // L'objet FileReader
+           var reader = new FileReader();
+
+           // L'événement déclenché lorsque la lecture est complète
+           reader.onload = function (e) {
+               // On change l'URL de l'image (base64)
+               imageteam.src = e.target.result
+           }
+
+           // On lit le fichier "picture" uploadé
+           reader.readAsDataURL(picture)
+           picture.style.display = "block"
 
        }
    } 

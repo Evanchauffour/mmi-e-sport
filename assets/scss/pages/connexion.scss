@@ -49,6 +49,7 @@
             background-color: transparent;
             font-family: clash-reg;
             color: #404A9A;
+            width: 100%;
         }
 
         input:focus {
@@ -103,4 +104,15 @@
     opacity: 0.5;
     width: 80%;
     opacity: 0.3;
+}
+
+@media screen and (max-width:425px){
+    .container-connexion{
+        .info-connexion{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
 }
