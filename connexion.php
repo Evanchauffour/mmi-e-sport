@@ -38,7 +38,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
         </form>
         <p>Pas de compte ? <span><a href="inscription.php">Inscris-toi !</a></span></p>
         <p><?php echo $error ?></p>
-        <img class="bg-connexion" src="../mmi-e-sport/assets/img/bg-connexion.svg" alt=""> 
+        <img class="bg-connexion" src="../mmi-e-sport/assets/img/bg-connexion.webp" alt=""> 
     </div>
     <a href="index.php" class="back-to-home">Retour site web...</a>
 </div>

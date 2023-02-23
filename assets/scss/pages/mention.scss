@@ -1,0 +1,33 @@
+.container-mention{
+    margin-top: calc(8vh + 120px);
+    margin-left: 160px;
+    margin-right: 160px;
+    ul{
+        margin-bottom: 50px;
+        font-family: clash-bold;
+        color: #404A9A;
+        li{
+            font-family: clash-reg;
+            list-style: none;
+            margin-bottom: 5px;
+        }
+    }
+}
+.back-mention{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    color: white;
+    background-color: #404A9A;
+    font-family: clash-semibold;
+    padding: 15px;
+}
+
+@media screen  and (max-width:1024px){
+    .container-mention{
+        margin-top: calc(8vh + 120px);
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}

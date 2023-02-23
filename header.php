@@ -23,11 +23,11 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
     <meta name="description" content="Site MMI Esport">
     <link rel="stylesheet" href="../mmi-e-sport/assets/css/app.css">
     <title>MMI E-SPORT</title>
-    <link rel="icon" type="image/x-icon" href="../mmi-e-sport/assets/img/logo.svg">
+    <link rel="icon" type="image/x-icon" href="../mmi-e-sport/assets/img/logo.webp">
 </head>
 <body>
     <header>
-        <a href="index.php"><img src="../mmi-e-sport/assets/img/logo.svg" alt=""></a>
+        <a href="index.php"><img src="../mmi-e-sport/assets/img/logo.webp" alt=""></a>
             <ul>
                 <li class="link" data-page='1'>Accueil</li>
                 <li class="link" data-page='2'>Programme</li>

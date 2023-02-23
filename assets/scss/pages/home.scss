@@ -1,10 +1,11 @@
 .page-home{
     display: block;
+    overflow-x: hidden;
 
 .home{
     width: 100vw;
     height: 100vh;
-    background-image: url(../img/Accueil-background.png);
+    background-image: url(../img/Accueil-background.webp);
     background-size: cover;
 
     .infos{
@@ -83,15 +84,47 @@
 }
 
 .sponsor{
-
     display: flex;
     margin-top: 10px;
-
-    marquee{
+    position: relative;
+    .container {
+        overflow: hidden;
+        display: flex;
+        /* Fonctionne avec toutes les tailles */
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        /* pour rotate on enlève le translate et on rajoute le rotate */
+        /* transform:  rotate(90deg); */
+      }
+      .txt {
+        white-space: nowrap;
         font-size: 32px;
+        animation: scrollTxt 20s linear infinite;
         font-family: clash-semibold;
+        text-transform: uppercase;
+      }
+      
+      .t1 { 
         color: #404A9A;
-    }
+      }
+      .t2 {
+        color: #404A9A;
+      }
+      .t3 {
+        color: #404A9A;
+      }
+      .t4 {
+        color: #404A9A;
+      }
+      @keyframes scrollTxt {
+        0%{
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(-100%, 0);
+        }
+      }
 }
 
 .info-event{
@@ -136,7 +169,10 @@
     .picture{
         width: 448px;
         height: auto;
-        background-color: #3C4B97;
+        img{
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .star1{
@@ -172,6 +208,7 @@
 
     img{
         margin-bottom: 75px;
+        width: 50%;
     }
 
     .live{
@@ -367,7 +404,7 @@
             padding-bottom: 40px;
             .contain-team{
                 h2 {
-                    font-size: 40px;
+                    font-size: 30px;
                 }
                 img{
                     width: 100%;

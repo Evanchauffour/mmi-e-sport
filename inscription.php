@@ -29,7 +29,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
             <div class="container-input">
                 <div class="container-input_label">
                     <label for="pseudo">Pseudonyme :</label>
-                    <input type="text" name="pseudo">
+                    <input type="text" name="pseudo" maxlength="15">
                 </div>
                 <div class="container-input_label">
                     <label for="email">Mail universitaire :</label>
@@ -40,14 +40,14 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                     <input type="password" name="motdepasse">
                 </div>
                 <div class="container-input_label">
-                    <label for="confirmePassword">Confirmer mot de passe :</label>
+                    <label for="confirmePassword">Confirmer mot de passe</label>
                     <input type="password" name="cmotdepasse">
                 </div>
             </div>
             <button>S'inscrire</button>
         </form>
         <p>Déjà un compte? <span><a href="connexion.php">Connecte-toi !</a></span></p>
-        <img class="bg-connexion" src="../mmi-e-sport/assets/img/bg-connexion.svg" alt=""> 
+        <img class="bg-connexion" src="../mmi-e-sport/assets/img/bg-connexion.webp" alt=""> 
     </div>
     <a href="index.php" class="back-to-home">Retour site web...</a>
 </div>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -24,17 +25,6 @@ body {
   font-family: clash-reg;
   src: url(../fonts/ClashDisplay-Regular.otf);
 }
-header.scroll {
-  background-color: #404A9A;
-}
-header.scroll li {
-  color: white;
-  cursor: pointer;
-}
-header.scroll a {
-  color: white;
-}
-
 header.twitch-scroll {
   background-color: #ffffff;
 }
@@ -55,8 +45,9 @@ header {
   align-items: center;
   width: 100vw;
   height: 10vh;
-  z-index: 1000;
+  z-index: 1000000;
   transition: all 0.3s ease;
+  transform: translateZ(70px);
 }
 header img {
   margin-left: 160px;
@@ -121,6 +112,15 @@ header .burger span {
   header header.twitch-scroll ul a {
     color: white;
   }
+  header header.twitch-scroll {
+    background-color: #404A9A;
+  }
+  header header.twitch-scroll ul li {
+    color: white;
+  }
+  header header.twitch-scroll ul a {
+    color: white;
+  }
   header ul {
     position: fixed;
     top: 0;
@@ -150,6 +150,7 @@ header .burger span {
 @media screen and (max-width: 425px) {
   header img {
     margin-left: 30px;
+    width: 20%;
   }
   header ul {
     margin-right: 30px;
@@ -197,11 +198,53 @@ footer .info ul li {
   color: #404A9A;
   font-weight: 400;
 }
+footer .info ul li a {
+  color: #404A9A;
+  text-decoration: none;
+}
 footer .info ul li:nth-child(1) {
   font-family: clash-semibold;
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+  footer img {
+    margin-left: 60px;
+    width: 80px;
+  }
+  footer p {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-family: clash-reg;
+  }
+  footer .info {
+    display: flex;
+    margin-right: 60px;
+  }
+  footer .info ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 115px;
+  }
+  footer .info ul li {
+    font-family: clash-reg;
+    font-size: 15px;
+    list-style: none;
+    color: #404A9A;
+    font-weight: 400;
+  }
+  footer .info ul li a {
+    color: #404A9A;
+    text-decoration: none;
+  }
+  footer .info ul li:nth-child(1) {
+    font-family: clash-semibold;
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 768px) {
   footer {
     flex-direction: column;
@@ -212,11 +255,39 @@ footer .info ul li:nth-child(1) {
   }
   footer .info {
     margin-right: 0;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
   }
   footer .info ul {
     margin: 0;
     padding-left: 30px;
     padding-right: 30px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+  }
+  footer img {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  footer .info {
+    margin-right: 0;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-between;
+  }
+  footer .info ul {
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -231,15 +302,17 @@ footer .info ul li:nth-child(1) {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
+    margin-bottom: 20px;
   }
 }
 .page-home {
   display: block;
+  overflow-x: hidden;
 }
 .page-home .home {
   width: 100vw;
   height: 100vh;
-  background-image: url(../img/Accueil-background.png);
+  background-image: url(../img/Accueil-background.webp);
   background-size: cover;
 }
 .page-home .home .infos {
@@ -310,11 +383,44 @@ footer .info ul li:nth-child(1) {
 .page-home .sponsor {
   display: flex;
   margin-top: 10px;
+  position: relative;
 }
-.page-home .sponsor marquee {
+.page-home .sponsor .container {
+  overflow: hidden;
+  display: flex;
+  /* Fonctionne avec toutes les tailles */
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  /* pour rotate on enlève le translate et on rajoute le rotate */
+  /* transform:  rotate(90deg); */
+}
+.page-home .sponsor .txt {
+  white-space: nowrap;
   font-size: 32px;
+  animation: scrollTxt 20s linear infinite;
   font-family: clash-semibold;
+  text-transform: uppercase;
+}
+.page-home .sponsor .t1 {
   color: #404A9A;
+}
+.page-home .sponsor .t2 {
+  color: #404A9A;
+}
+.page-home .sponsor .t3 {
+  color: #404A9A;
+}
+.page-home .sponsor .t4 {
+  color: #404A9A;
+}
+@keyframes scrollTxt {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 .page-home .info-event {
   position: relative;
@@ -353,7 +459,10 @@ footer .info ul li:nth-child(1) {
 .page-home .info-event .picture {
   width: 448px;
   height: auto;
-  background-color: #3C4B97;
+}
+.page-home .info-event .picture img {
+  width: 100%;
+  height: 100%;
 }
 .page-home .info-event .star1 {
   position: absolute;
@@ -386,6 +495,7 @@ footer .info ul li:nth-child(1) {
 }
 .page-home .twitch img {
   margin-bottom: 75px;
+  width: 50%;
 }
 .page-home .twitch .live {
   position: relative;
@@ -537,7 +647,7 @@ footer .info ul li:nth-child(1) {
     padding-bottom: 40px;
   }
   .page-home .team .contain-team h2 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .page-home .team .contain-team img {
     width: 100%;
@@ -673,8 +783,8 @@ footer .info ul li:nth-child(1) {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #ffffff;
@@ -707,7 +817,6 @@ footer .info ul li:nth-child(1) {
   background-color: transparent;
   font-family: clash-reg;
   color: #404A9A;
-  font-size: 20px;
 }
 .container-inscription form input:focus {
   outline: none;
@@ -1120,6 +1229,45 @@ footer .info ul li:nth-child(1) {
   .page-jeux .container-jeux-competitif .jeux-competitif .jeux {
     width: 100%;
   }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 80vh;
+    background-color: white;
+    overflow: scroll;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain {
+    flex-direction: column;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain h3, .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain h4 {
+    margin-bottom: 10px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left img {
+    margin-bottom: 10px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left p {
+    font-size: 16px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form {
+    position: relative;
+    width: 100%;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form input {
+    margin-bottom: 30px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .button {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    margin: 0;
+  }
   .page-jeux .container-jeux-autre .jeux-autre .jeux {
     width: 100%;
   }
@@ -1189,6 +1337,53 @@ footer .info ul li:nth-child(1) {
     width: 100%;
     height: 150px;
   }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 80vh;
+    background-color: white;
+    overflow: scroll;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 59px;
+    width: calc(100% - 40px);
+    height: 100%;
+    flex-direction: column;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain h3, .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain h4 {
+    margin-bottom: 20px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left img {
+    margin-bottom: 10px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain .left p {
+    font-size: 14px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form {
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form input {
+    margin-bottom: 30px;
+  }
+  .page-jeux .container-jeux-competitif .background-pop-up-competitive .pop-up-competitive .contain form .button {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
   .page-jeux .container-jeux-autre {
     margin-left: 30px;
     margin-right: 30px;
@@ -1228,7 +1423,6 @@ footer .info ul li:nth-child(1) {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #404A9A;
   margin-bottom: 100px;
 }
 .page-teams .myEquipe .head-myEquipe {
@@ -1237,6 +1431,7 @@ footer .info ul li:nth-child(1) {
   align-items: center;
   height: 70px;
   width: 100%;
+  background-color: #404A9A;
 }
 .page-teams .myEquipe .head-myEquipe h3 {
   color: white;
@@ -1282,6 +1477,7 @@ footer .info ul li:nth-child(1) {
 }
 .page-teams .myEquipe .infos-myEquipe .jeu .contain-jeu {
   margin: 30px 30px;
+  height: 250px;
 }
 .page-teams .myEquipe .infos-myEquipe .jeu .contain-jeu h5 {
   position: relative;
@@ -1290,17 +1486,7 @@ footer .info ul li:nth-child(1) {
   font-family: clash-semibold;
   margin-bottom: 15px;
   display: inline-block;
-}
-.page-teams .myEquipe .infos-myEquipe .jeu .contain-jeu h5::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 110%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100px;
-  height: 1px;
-  background: white;
+  text-decoration: underline;
 }
 .page-teams .myEquipe .infos-myEquipe .jeu .contain-jeu h6 {
   color: white;
@@ -1318,7 +1504,7 @@ footer .info ul li:nth-child(1) {
   font-size: 14px;
   font-family: clash-semibold;
   list-style: none;
-  padding: 10px;
+  padding-bottom: 10px;
   text-transform: uppercase;
 }
 .page-teams h1 {
@@ -1347,7 +1533,7 @@ footer .info ul li:nth-child(1) {
 }
 .page-teams .container-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   padding-top: 50px;
   border-top: solid #404A9A;
@@ -1357,13 +1543,14 @@ footer .info ul li:nth-child(1) {
   background: transparent;
   border: none;
   cursor: pointer;
+  margin: 0 auto;
 }
 .page-teams .carousel:hover .spin-container {
   transform: rotateY(180deg);
 }
 .page-teams .spin-container {
-  width: 256px;
-  height: 338px;
+  width: 170px;
+  height: 218px;
   position: relative;
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d;
@@ -1396,11 +1583,12 @@ footer .info ul li:nth-child(1) {
 }
 .page-teams .front .contain-front img {
   transform: translateZ(20px);
+  width: 70%;
 }
 .page-teams .front .contain-front h3 {
   color: white;
   margin-left: 0;
-  font-size: 32px;
+  font-size: 15px;
   text-transform: uppercase;
   transform: translateZ(50px);
 }
@@ -1417,7 +1605,7 @@ footer .info ul li:nth-child(1) {
 .page-teams .back h3 {
   color: #404A9A;
   margin-left: 0;
-  font-size: 32px;
+  font-size: 25px;
   text-transform: uppercase;
   transform: translateZ(50px);
 }
@@ -1427,7 +1615,7 @@ footer .info ul li:nth-child(1) {
 .page-teams .back ul li {
   list-style: none;
   color: #404A9A;
-  font-size: 20px;
+  font-size: 15px;
   text-transform: uppercase;
   font-family: clash-semibold;
 }
@@ -1453,21 +1641,120 @@ footer .info ul li:nth-child(1) {
     margin-left: 60px;
     margin-right: 60px;
   }
+  .page-teams .myEquipe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #404A9A;
+    margin-bottom: 100px;
+  }
+  .page-teams .myEquipe .head-myEquipe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+  }
+  .page-teams .myEquipe .head-myEquipe h3 {
+    color: white;
+    font-family: clash-semibold;
+    font-size: 32px;
+    margin-left: 20px;
+  }
+  .page-teams .myEquipe .infos-myEquipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+  }
+  .page-teams .myEquipe .infos-myEquipe .jeu {
+    background-color: #404A9A;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-right: solid white;
+  }
+  .page-teams .myEquipe .infos-myEquipe .jeu .head-jeu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+  }
+  .page-teams .myEquipe .infos-myEquipe .jeu .head-jeu h4 {
+    color: white;
+    font-size: 32px;
+    font-family: clash-semibold;
+    z-index: 10;
+    position: relative;
+  }
+  .page-teams .myEquipe .infos-myEquipe .jeu .head-jeu img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  .page-teams .myEquipe .infos-myEquipe .jeu .contain-jeu {
+    margin: 30px 30px;
+    height: 150px;
+  }
+  .page-teams .myEquipe .infos-myEquipe .jeu .contain-jeu h6 {
+    font-size: 20px;
+    text-align: left;
+  }
+  .page-teams .myEquipe .infos-myEquipe .jeu .contain-jeu .container-joueurs {
+    flex-direction: column;
+  }
+  .page-teams .myEquipe .infos-myEquipe .jeu .contain-jeu .container-joueurs ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .page-teams .myEquipe .infos-myEquipe .jeu .contain-jeu .container-joueurs ul li {
+    text-align: center;
+    margin-right: 30px;
+  }
   .page-teams .spin-container {
-    width: 200px;
-    height: 280px;
+    width: 170px;
+    height: 218px;
   }
   .page-teams .front .contain-front img {
     width: 80%;
   }
   .page-teams .front .contain-front h3 {
-    font-size: 28px;
+    font-size: 15px;
+  }
+  .page-teams .front .back h3 {
+    color: #404A9A;
+    margin-left: 0;
+    font-size: 25px;
+    text-transform: uppercase;
+    transform: translateZ(50px);
+  }
+  .page-teams .front .back ul {
+    transform: translateZ(50px);
+  }
+  .page-teams .front .back ul li {
+    list-style: none;
+    color: #404A9A;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: clash-semibold;
   }
 }
 @media screen and (max-width: 425px) {
+  .page-teams .front .contain-front h3 {
+    font-size: 20px;
+  }
   .page-teams {
     margin-left: 30px;
     margin-right: 30px;
+  }
+  .page-teams .front .contain-front img {
+    width: 80%;
   }
   .page-teams h3 {
     margin-left: 0;
@@ -1488,11 +1775,14 @@ footer .info ul li:nth-child(1) {
     width: 100%;
     height: 250px;
   }
-  .page-teams .front .contain-front img {
-    width: 80%;
+  .page-teams .spin-container .back h3 {
+    font-size: 20px;
   }
-  .page-teams .front .contain-front h3 {
-    font-size: 28px;
+  .page-teams .spin-container .back ul {
+    transform: translateZ(50px);
+  }
+  .page-teams .spin-container .back ul li {
+    font-size: 16px;
   }
 }
 .page-programme {
@@ -1622,7 +1912,7 @@ footer .info ul li:nth-child(1) {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 350px;
+    height: 400px;
     border: solid 1px #404A9A;
   }
   .page-programme .container-programme {
@@ -1701,6 +1991,40 @@ footer .info ul li:nth-child(1) {
     background-color: #404A9A;
     height: 2px;
     margin-right: 4px;
+  }
+}
+.container-mention {
+  margin-top: calc(8vh + 120px);
+  margin-left: 160px;
+  margin-right: 160px;
+}
+.container-mention ul {
+  margin-bottom: 50px;
+  font-family: clash-bold;
+  color: #404A9A;
+}
+.container-mention ul li {
+  font-family: clash-reg;
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.back-mention {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: white;
+  background-color: #404A9A;
+  font-family: clash-semibold;
+  padding: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container-mention {
+    margin-top: calc(8vh + 120px);
+    margin-left: 60px;
+    margin-right: 60px;
   }
 }
 

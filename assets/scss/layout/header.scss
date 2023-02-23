@@ -27,19 +27,6 @@ body{
     src: url(../fonts/ClashDisplay-Regular.otf);
 }
 
-    header.scroll{
-        background-color: #404A9A;
-
-        li{
-            color: white;
-            cursor: pointer;
-        }
-
-        a{
-            color: white;
-        }
-    }
-
     header.twitch-scroll{
         background-color: #ffffff;
         ul{
@@ -63,8 +50,9 @@ header{
     align-items: center;
     width: 100vw;
     height: 10vh;
-    z-index: 1000;
+    z-index: 1000000;
     transition: all 0.3s ease;
+    transform: translateZ(70px);
 
     img{
         margin-left: 160px;
@@ -142,6 +130,19 @@ header{
             }
         }
 
+        
+    header.twitch-scroll{
+        background-color: #404A9A;
+        ul{
+            li{
+                color: white;
+            }
+            a{
+                color: white;
+            }
+        }
+    }
+
         ul{
             position: fixed;
             top: 0;
@@ -175,6 +176,7 @@ header{
     header{  
         img{
             margin-left: 30px;
+            width: 20%;
         }
     
         ul{
