@@ -23,11 +23,11 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
     <meta name="description" content="Site MMI Esport">
     <link rel="stylesheet" href="../mmi-e-sport/assets/css/app.css">
     <title>MMI E-SPORT</title>
-    <link rel="icon" type="image/x-icon" href="../mmi-e-sport/assets/img/logo.webp">
+    <link rel="icon" type="image/x-icon" href="../mmi-e-sport/assets/img/logo.svg">
 </head>
 <body>
     <header>
-        <a href="index.php"><img src="../mmi-e-sport/assets/img/logo.webp" alt=""></a>
+        <a href="index.php"><img src="../mmi-e-sport/assets/img/logo.svg" alt=""></a>
             <ul>
                 <li class="link" data-page='1'>Accueil</li>
                 <li class="link" data-page='2'>Programme</li>
@@ -41,7 +41,8 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                 }
                 else{
                 ?>
-                 <a href=""><?php echo$_SESSION['utilisateur']['id']?></a>
+                 <a href=""><?php echo $_SESSION['utilisateur']['id'];
+                 $nomplayer = $_SESSION['utilisateur']['id'];?></a>
                  <a href="deco.php">Déconnexion</a>
                 <?php
                 }
