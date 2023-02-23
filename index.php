@@ -1,17 +1,3 @@
-<?php
-$user = 'mamp';
-$pass = 'root';
-try  
-{     $db = new PDO ('mysql:host=localhost;dbname=mmiesport;charset=utf8', 'mamp', 'root');
-} catch (PDOException $e)
-{     print "Erreur: ". $e->getmessage() . "<br/>";
-die;
-}
-if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
-    $id=$_POST['pseudo'];
-    $mdp=$_POST['mdp'];
-}
-?>  
 <?php include('header.php') ?>
 <div class="page page-home" data-page="1">
 <div class="home">
@@ -35,10 +21,11 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
     </div>
 </div>
 <div class="sponsor">
-    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - MICOUD Production - </marquee>
-    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - MICOUD Production - </marquee>
-    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - MICOUD Production - </marquee>
-    <marquee>Valiant - MMI Chambéry - L'avalanche - Breakout - MICOUD Production - </marquee>
+<div class="container">
+      <span class="txt t1">- Team Valiant - Espace Malraux - Pathé Gaumont - BreakOut - Laser Game Evolution - I Bowling - BrassBand Accord - L'avalanche&nbsp;</span>
+      <span class="txt t2">- Team Valiant - Espace Malraux - Pathé Gaumont - BreakOut - Laser Game Evolution - I Bowling - BrassBand Accord - L'avalanche&nbsp;</span>
+      <span class="txt t3">- Team Valiant - Espace Malraux - Pathé Gaumont - BreakOut - Laser Game Evolution - I Bowling - BrassBand Accord - L'avalanche&nbsp;</span>
+    </div>
 </div>
 <div class="info-event">
     <div class="text">
@@ -48,21 +35,21 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
         <br> Venez passer un bon moment sur nos différents stands (réalité virtuelle, arcades, et bien d’autres), et supporter nos équipes d’étudiants MMI pendant les demi-finales et finales de notre tournoi Valorant. 
         De nombreux lots seront à gagner grâce à nos partenaires sur l'événement.</p>
     </div>
-    <div class="picture"></div>
-    <img src="../mmi-e-sport/assets/img/star.svg" alt="" class="star1">
-    <img src="../mmi-e-sport/assets/img/star.svg" alt="" class="star2">
-    <img src="../mmi-e-sport/assets/img/star.svg" alt="" class="star3">
+    <div class="picture"><img src="../mmi-e-sport/assets/img/test.svg" alt=""></div>
+    <img src="../mmi-e-sport/assets/img/star.webp" alt="" class="star1">
+    <img src="../mmi-e-sport/assets/img/star.webp" alt="" class="star2">
+    <img src="../mmi-e-sport/assets/img/star.webp" alt="" class="star3">
 </div>
 <div class="twitch">
-    <img src="../mmi-e-sport/assets/img/rejoigniez.svg" alt="">
+    <img src="../mmi-e-sport/assets/img/rejoigniez.webp" alt="">
     <div class="live">
-    <iframe src="https://player.twitch.tv/?channel=kamet0&parent=mmi.univ-smb.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+    <iframe src="https://player.twitch.tv/?channel=mmi_esport&parent=mmi.univ-smb.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
     </div>
 </div>
 <div class="team">
     <div class="contain-team">
         <h2>NOTRE EQUIPE</h2>
-        <img src="../mmi-e-sport/assets/img/team-img.svg" alt="">
+        <img src="../mmi-e-sport/assets/img/team-img.webp" alt="">
     </div>
 </div>
 </div>
@@ -79,28 +66,28 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                     <h3>un espace de détente</h3>
                     <p>Retrouver un espace convivial avec des jeux de salons phares comme Mario Kart, Just Dance et plein d'autres encore !</p>
                 </div>
-                <img src="../mmi-e-sport/assets/img/detente.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/detente.webp" alt="">
             </div>
             <div class="espace">
                 <div class="infos">
                     <h3>un espace compétitif</h3>
                     <p>Là où se passera les différents matchs compétitifs, Smash Bros, Rocket League… et bien évidemment les matchs du tournoi Valorant MMI.</p>
                 </div>
-                <img src="../mmi-e-sport/assets/img/compete.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/compete.webp" alt="">
             </div>
             <div class="espace">
                 <div class="infos">
                     <h3>un espace réalité virtuelle</h3>
                     <p>Plongez dans le futur du jeux vidéo et des innovations technologiques à travers une expérience de simulation de vol.</p>
                 </div>
-                <img src="../mmi-e-sport/assets/img/espace-vr.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/espace-vr.webp" alt="">
             </div>
             <div class="espace">
                 <div class="infos">
                     <h3>un espace arcade</h3>
                     <p>Revivez les années 80 et le plaisir des jeux “retrogaming” entre a-mmi’s    =)</p>
                 </div>
-                <img src="../mmi-e-sport/assets/img/arcade.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/arcade.webp" alt="">
             </div>
         </div>
     </div>
@@ -114,6 +101,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
 </div>
 
 <!-- Page Jeux -->
+
 <div class="page page-jeux" data-page="3">
     <div class="container-jeux-competitif">
         <h1>COMPÉTITIF</h1>
@@ -121,109 +109,33 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
         <div class="jeux-competitif">
             <div class="jeux">
                 <h3>Valorant</h3>
-                <?php
-                if($_SESSION['utilisateur']==''){
-                ?>
-        <a href="inscription.php">Veuillez vous connecter</a>
-        <?php
-                }
-                else{
-                    $_SESSION['utilisateur']['id'] = $nomplayer;
-                    foreach($db->query("SELECT * from equipes WHERE chef = '$nomplayer' and jeu_id = 1") as $chef_mail){
-                        $mailchef = $chef_mail['chef'];
-                        }
-                        if($mailchef == $nomplayer){
-                            ?>
-                            <p class="open-competitive" data-pop="1">Modifier</p>
-                            <?php
-
-                        }
-                        else{
-
-                ?>  
                 <p class="open-competitive" data-pop="1">S'inscrire</p>
-                <?php
-            }
-        }
-            ?>
-                <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/valo.webp" alt="">
             </div>
             <div class="jeux">
                 <h3>Rocket League</h3>
-                <?php
-                if($_SESSION['utilisateur']==''){
-                ?>
-        <a href="inscription.php">Veuillez vous connecter</a>
-        <?php
-                }
-                else{
-                    $_SESSION['utilisateur']['id'] = $nomplayer;
-                    foreach($db->query("SELECT * from equipes WHERE chef = '$nomplayer' and jeu_id = 2") as $chef_mailr){
-                        $mailchefr = $chef_mailr['chef'];
-                        }
-                        if($mailchefr == $nomplayer){
-                            ?>
-                            <p class="open-competitive" data-pop="2">Modifier</p>
-                            <?php
-
-                        }
-                        else{
-
-                ?>  
                 <p class="open-competitive" data-pop="2">S'inscrire</p>
-                <?php
-            }
-        }
-            ?>
-                <img src="../mmi-e-sport/assets/img/rocket.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/rocket.webp" alt="">
             </div>
             <div class="jeux">
                 <h3>Team Fortress 2</h3>
-                <?php
-                if($_SESSION['utilisateur']==''){
-                ?>
-        <a href="inscription.php">Veuillez vous connecter</a>
-        <?php
-                }
-                else{
-                    $_SESSION['utilisateur']['id'] = $nomplayer;
-                    foreach($db->query("SELECT * from equipes WHERE chef = '$nomplayer' and jeu_id = 3") as $chef_mailv){
-                        $mailchefv = $chef_mailv['chef'];
-                        }
-                        if($mailchefv == $nomplayer){
-                            ?>
-                            <p class="open-competitive" data-pop="3">Modifier</p>
-                            <?php
-
-                        }
-                        else{
-
-                ?>  
                 <p class="open-competitive" data-pop="3">S'inscrire</p>
-                <?php
-            }
-        }
-            ?>
-                <img src="../mmi-e-sport/assets/img/team.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/team.webp" alt="">
             </div>
         </div>
-        <?php
-        if($mailchef != $nomplayer){
-            ?>
-        <!-- Debut cre v -->
         <div class="background-pop-up-competitive" data-pop="1">
         <div class="pop-up-competitive" data-pop="1">
             <div class="contain">
                 <div class="left">
-                    <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
+                    <img src="../mmi-e-sport/assets/img/valo.webp" alt="">
                     <h3>Valorant</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
+                    <p>Deux équipes de cinq joueurs s’affrontent sur des cartes fermées durant un certain nombre de rounds. L’équipe en Attaque doit atteindre l’un des sites objectifs et y placer une bombe. L’équipe de défense doit les en empêcher, et désamorcer la bombe.Les attaquants remportent le round lorsque la bombe explose ou que tous les défenseurs sont éliminés. Les défenseurs l’emportent lorsque tous les attaquants sont éliminés ou/et que la bombe est désamorcée.</p>
                 </div>
-                <form action="#" method="post">
+                <form action="">
                     <div class="upper">
                         <div class="upper-left">
                             <h4>equipe</h4>
-                            <input type="text" placeholder="Nom" name="nom">
+                            <input type="text" placeholder="Nom" maxlength="10">
                             <label for="file-upload1" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
                             <input id="file-upload1" type="file" name="picture" onchange="previewPicture1(this)" accept=".jpg, .png, .gif" />
                         </div>
@@ -237,11 +149,11 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                     <div class="lower">
                         <div class="lower-left">
                             <h4>MEMBRES D’ÉQUIPE</h4>
-                            <input type="email" placeholder="Mail Universitaire chef d'équipe" name="mail1">
-                            <input type="email" placeholder="Mail Universitaire" name="mail2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail3">
-                            <input type="email" placeholder="Mail Universitaire" name="mail4">
-                            <input type="email" placeholder="Mail Universitaire" name="mail5">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
                         </div>
 
                     </div>
@@ -252,266 +164,20 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])){
                 <img src="../mmi-e-sport/assets/img/close.svg" alt="">
             </div>
         </div>
-        <?php
-$nom_create = $_POST['nom'];
-$mail1 = $_POST['mail1'];
-$mail2 = $_POST['mail2'];
-$mail3 = $_POST['mail3'];
-$mail4 = $_POST['mail4'];   
-$mail5 = $_POST['mail5'];
-if($nom_create != NULL){
-    foreach($db->query("SELECT * FROM equipes INNER JOIN jeux ON equipes.jeu_id = jeux.id WHERE jeux.nom = 'valorant'") as $row) {
-        $team_valo_name = $row['1'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail1'") as $player1) {
-        $player1_id = $player1['0'];
-        $player1_name = $player1['1'];
-        $player1_mail = $player1['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail2'") as $player2) {
-        $player2_id = $player2['0'];
-        $player2_name = $player2['1'];
-        $player2_mail = $player2['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail3'") as $player3) {
-        $player3_id = $player3['0'];
-        $player3_name = $player3['1'];
-        $player3_mail = $player3['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail4'") as $player4) {
-        $player4_id = $player4['0'];
-        $player4_name = $player4['1'];
-        $player4_mail = $player4['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail5'") as $player5) {
-        $player5_id = $player5['0'];
-        $player5_name = $player5['1'];
-        $player5_mail = $player5['2'];
-        }
-    if($nom_create != $team_valo_name){       
-                if($mail1 == $player1_mail){
-                    if($mail2 == $player2_mail){
-                        if($mail3 == $player3_mail){
-                            if($mail4 == $player4_mail){
-                                if($mail5 == $player5_mail){
-                                            $q = $db->prepare("INSERT INTO equipes(nom,jeu_id,chef) VALUES (:nom,:jeu_id,:chef)");
-                                            $q->execute([
-                                                'nom' => $nom_create,
-                                                'jeu_id'=> 1,
-                                                'chef' => $player1_name
-                                                ]);
-                                                foreach($db->query("SELECT * from equipes WHERE chef = '$player1_name'") as $equipes){
-                                                    $id_equipev = $equipes['0'];
-                                                    }
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player1_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player2_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player3_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                        $i->execute([
-                                        'idplayer' => $player4_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player5_id,
-                                        'idteam'=> $id_equipev,
-                                        ]);   
-                                }
-                            }
-                        }
-                    }   
-                }
-        else{
-            echo "<p>Veuillez rentrez tout les champs</p>";
-        }
-    }
-    elseif($team_valo_name==$nom_create){
-            echo "<p>Le nom d'équipe est déjà utilisé</p>";
-    }
-} 
-?>
-
 </div>
-<!-- Fin -->
-<?php
-}
-
-if($mailchef == $nomplayer){
-?>
-<!-- Debut chef  -->
-  <div class="background-pop-up-competitive" data-pop="1">
-        <div class="pop-up-competitive" data-pop="1">
-            <div class="contain">
-                <div class="left">
-                    <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
-                    <h3>Valorant</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
-                </div>
-                <form action="#" method="post">
-                    <div class="upper">
-                        <div class="upper-left">
-                            <h4>equipe</h4>
-                            <input type="text" placeholder="Nom" name="nom">
-                            <label for="file-upload1" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
-                            <input id="file-upload1" type="file" name="picture" onchange="previewPicture1(this)" accept=".jpg, .png, .gif" />
-                        </div>
-                        <div class="upper-right">
-                            <div class="logo">
-                                <img id="imagevalo" src="">
-                                <!-- <input type="file" name="picture" onchange="previewPicture(this)" accept=".jpg, .png, .gif" required > -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lower">
-                        <div class="lower-left">
-                            <h4>MEMBRES D’ÉQUIPE</h4>
-                            <input type="email" placeholder="Mail Universitaire chef d'équipe" name="mail1">
-                            <input type="email" placeholder="Mail Universitaire" name="mail2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail3">
-                            <input type="email" placeholder="Mail Universitaire" name="mail4">
-                            <input type="email" placeholder="Mail Universitaire" name="mail5">
-                        </div>
-
-                    </div>
-                    <input type="submit" value="Modifier" class="button">
-                </form>
-            </div>
-            <div class="close">
-                <img src="../mmi-e-sport/assets/img/close.svg" alt="">
-            </div>
-        </div>
-        <?php
-$nom_create = $_POST['nom'];
-$mail1 = $_POST['mail1'];
-$mail2 = $_POST['mail2'];
-$mail3 = $_POST['mail3'];
-$mail4 = $_POST['mail4'];   
-$mail5 = $_POST['mail5'];
-if($nom_create != NULL){
-    foreach($db->query("SELECT * FROM equipes INNER JOIN jeux ON equipes.jeu_id = jeux.id WHERE jeux.nom = 'valorant'") as $row) {
-        $team_valo_name = $row['1'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail1'") as $player1) {
-        $player1_id = $player1['0'];
-        $player1_name = $player1['1'];
-        $player1_mail = $player1['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail2'") as $player2) {
-        $player2_id = $player2['0'];
-        $player2_name = $player2['1'];
-        $player2_mail = $player2['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail3'") as $player3) {
-        $player3_id = $player3['0'];
-        $player3_name = $player3['1'];
-        $player3_mail = $player3['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail4'") as $player4) {
-        $player4_id = $player4['0'];
-        $player4_name = $player4['1'];
-        $player4_mail = $player4['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail5'") as $player5) {
-        $player5_id = $player5['0'];
-        $player5_name = $player5['1'];
-        $player5_mail = $player5['2'];
-        }
-    if($nom_create != $team_valo_name){       
-                if($mail1 == $player1_mail){
-                    if($mail2 == $player2_mail){
-                        if($mail3 == $player3_mail){
-                            if($mail4 == $player4_mail){
-                                if($mail5 == $player5_mail){
-                                    foreach($db->query("SELECT * from equipes WHERE chef = '$player1_name'") as $equipes){
-                                        $id_equipev = $equipes['0'];
-                                        }
-                                    $db->exec("DELETE FROM membres_equipe WHERE equipe_id = '$id_equipev';
-                                            DELETE FROM equipes WHERE id = '$id_equipev';");
-                                            $q = $db->prepare("INSERT INTO equipes(nom,jeu_id,chef) VALUES (:nom,:jeu_id,:chef)");
-                                            $q->execute([
-                                                'nom' => $nom_create,
-                                                'jeu_id'=> 1,
-                                                'chef' => $player1_name
-                                                ]);
-                                                foreach($db->query("SELECT * from equipes WHERE chef = '$player1_name'") as $equipes){
-                                                    $id_equipev = $equipes['0'];
-                                                    }
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player1_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player2_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player3_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                        $i->execute([
-                                        'idplayer' => $player4_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player5_id,
-                                        'idteam'=> $id_equipev,
-                                        ]);   
-                                }
-                            }
-                        }
-                    }   
-                }
-        else{
-            echo "<p>Veuillez rentrez tout les champs</p>";
-        }
-    }
-    elseif($team_valo_name==$nom_create){
-            echo "<p>Le nom d'équipe est déjà utilisé</p>";
-    }
-} 
-?>
-
-</div>
-
-<!-- fin chef -->
-<?php
-}
-
-
-if($mailchefr != $nomplayer){
-    ?>
-
-<!-- debut crea rocket  -->
         <div class="background-pop-up-competitive" data-pop="2">
             <div class="pop-up-competitive">
                 <div class="contain">
                     <div class="left">
-                        <img src="../mmi-e-sport/assets/img/rocket.svg" alt="">
+                        <img src="../mmi-e-sport/assets/img/rocket.webp" alt="">
                         <h3>Rocket Leagues</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
+                        <p>Rocket League est un jeu de voiture version football. On s’affronte en 3 contre 3, on a un ballon, deux cages, des super cars, et il faut marquer dans le but de son adversaire.</p>
                     </div>
-                    <form action="#" method="post">
+                    <form action="">
                         <div class="upper">
                             <div class="upper-left">
                                 <h4>equipe</h4>
-                                <input type="text" placeholder="Nom" name="nomr">
+                                <input type="text" placeholder="Nom">
                                 <label for="file-upload2" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
                                 <input id="file-upload2" type="file" name="picture" onchange="previewPicture2(this)" accept=".jpg, .png, .gif" />
                             </div>
@@ -524,9 +190,11 @@ if($mailchefr != $nomplayer){
                         <div class="lower">
                             <div class="lower-left">
                                 <h4>MEMBRES D’ÉQUIPE</h4>
-                                <input type="email" placeholder="Mail Universitaire chef d'équipe" name="mail1r">
-                                <input type="email" placeholder="Mail Universitaire" name="mail2r">
-                                <input type="email" placeholder="Mail Universitaire" name="mail3r">
+                                <input type="email" placeholder="Mail Universitaire">
+                                <input type="email" placeholder="Mail Universitaire">
+                                <input type="email" placeholder="Mail Universitaire">
+                                <input type="email" placeholder="Mail Universitaire">
+                                <input type="email" placeholder="Mail Universitaire">
                             </div>
                         </div>
                         <input type="submit" value="Valider" class="button">
@@ -536,207 +204,20 @@ if($mailchefr != $nomplayer){
                     <img src="../mmi-e-sport/assets/img/close.svg" alt="">
                 </div>
             </div>
-
-            <?php
-$nom_create = $_POST['nomr'];
-$mail1 = $_POST['mail1r'];
-$mail2 = $_POST['mail2r'];
-$mail3 = $_POST['mail3r'];
-if($nom_create != NULL){
-    foreach($db->query("SELECT * FROM equipes INNER JOIN jeux ON equipes.jeu_id = jeux.id WHERE jeux.nom = 'rocket'") as $row) {
-        $team_valo_name = $row['1'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail1'") as $player1) {
-        $player1_id = $player1['0'];
-        $player1_name = $player1['1'];
-        $player1_mail = $player1['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail2'") as $player2) {
-        $player2_id = $player2['0'];
-        $player2_name = $player2['1'];
-        $player2_mail = $player2['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail3'") as $player3) {
-        $player3_id = $player3['0'];
-        $player3_name = $player3['1'];
-        $player3_mail = $player3['2'];
-        }
-    if($nom_create != $team_valo_name){       
-                if($mail1 == $player1_mail){
-                    if($mail2 == $player2_mail){
-                        if($mail3 == $player3_mail){
-                                            $q = $db->prepare("INSERT INTO equipes(nom,jeu_id,chef) VALUES (:nom,:jeu_id,:chef)");
-                                            $q->execute([
-                                                'nom' => $nom_create,
-                                                'jeu_id'=> 2,
-                                                'chef' => $player1_name
-                                                ]);
-                                                foreach($db->query("SELECT * from equipes WHERE chef = '$player1_name'") as $equipes){
-                                                    $id_equipev = $equipes['0'];
-                                                    }
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player1_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player2_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player3_id,
-                                        'idteam'=> $id_equipev,
-                                        ]);   
-                        }
-                    }   
-                }
-        else{
-            echo "<p>Veuillez rentrez tout les champs</p>";
-        }
-    }
-    elseif($team_valo_name==$nom_create){
-            echo "<p>Le nom d'équipe est déjà utilisé</p>";
-    }
-} 
-?>
-      </div>
-      <?php
-}
-if($mailchefr == $nomplayer){
-    ?>
-      <!-- fin crea rocket  -->
-    <!-- debut  chef rocket  -->
-    <div class="background-pop-up-competitive" data-pop="2">
-            <div class="pop-up-competitive">
-                <div class="contain">
-                    <div class="left">
-                        <img src="../mmi-e-sport/assets/img/rocket.svg" alt="">
-                        <h3>Rocket Leagues</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
-                    </div>
-                    <form action="#" method="post">
-                        <div class="upper">
-                            <div class="upper-left">
-                                <h4>equipe</h4>
-                                <input type="text" placeholder="Nom" name="nomr">
-                                <label for="file-upload2" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
-                                <input id="file-upload2" type="file" name="picture" onchange="previewPicture2(this)" accept=".jpg, .png, .gif" />
-                            </div>
-                            <div class="upper-right">
-                                <div class="logo">
-                                    <img id="imagerocket" src="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lower">
-                            <div class="lower-left">
-                                <h4>MEMBRES D’ÉQUIPE</h4>
-                                <input type="email" placeholder="Mail Universitaire chef d'équipe" name="mail1r">
-                                <input type="email" placeholder="Mail Universitaire" name="mail2r">
-                                <input type="email" placeholder="Mail Universitaire" name="mail3r">
-                            </div>
-                        </div>
-                        <input type="submit" value="Modifier" class="button">
-                    </form>
-                </div>
-                <div class="close">
-                    <img src="../mmi-e-sport/assets/img/close.svg" alt="">
-                </div>
-            </div>
-
-            <?php
-$nom_create = $_POST['nomr'];
-$mail1 = $_POST['mail1r'];
-$mail2 = $_POST['mail2r'];
-$mail3 = $_POST['mail3r'];
-if($nom_create != NULL){
-    foreach($db->query("SELECT * FROM equipes INNER JOIN jeux ON equipes.jeu_id = jeux.id WHERE jeux.nom = 'rocket'") as $row) {
-        $team_valo_name = $row['1'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail1'") as $player1) {
-        $player1_id = $player1['0'];
-        $player1_name = $player1['1'];
-        $player1_mail = $player1['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail2'") as $player2) {
-        $player2_id = $player2['0'];
-        $player2_name = $player2['1'];
-        $player2_mail = $player2['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail3'") as $player3) {
-        $player3_id = $player3['0'];
-        $player3_name = $player3['1'];
-        $player3_mail = $player3['2'];
-        }
-    if($nom_create != $team_valo_name){       
-                if($mail1 == $player1_mail){
-                    if($mail2 == $player2_mail){
-                        if($mail3 == $player3_mail){
-                            foreach($db->query("SELECT * from equipes WHERE chef = '$player1_name'") as $equipes){
-                                $id_equipev = $equipes['0'];
-                                }
-                            $db->exec("DELETE FROM membres_equipe WHERE equipe_id = '$id_equipev';
-                                    DELETE FROM equipes WHERE id = '$id_equipev';");
-                                            $q = $db->prepare("INSERT INTO equipes(nom,jeu_id,chef) VALUES (:nom,:jeu_id,:chef)");
-                                            $q->execute([
-                                                'nom' => $nom_create,
-                                                'jeu_id'=> 2,
-                                                'chef' => $mail1
-                                                ]);
-                                                foreach($db->query("SELECT * from equipes WHERE chef = '$mail1'") as $equipes){
-                                                    $id_equipev = $equipes['0'];
-                                                    }
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player1_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player2_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player3_id,
-                                        'idteam'=> $id_equipev,
-                                        ]);   
-                        }
-                    }   
-                }
-        else{
-            echo "<p>Veuillez rentrez tout les champs</p>";
-        }
-    }
-    elseif($team_valo_name==$nom_create){
-            echo "<p>Le nom d'équipe est déjà utilisé</p>";
-    }
-} 
-?>
-      </div>
-      <?php
-}
-?>
-    <!--  fin chef rocket -->
-    <?php
-    if($mailchefv != $nomplayer){
-        ?>
-      <!-- Debut crea tf2 -->
+        </div>
         <div class="background-pop-up-competitive" data-pop="3">
         <div class="pop-up-competitive">
             <div class="contain">
                 <div class="left">
-                    <img src="../mmi-e-sport/assets/img/team.svg" alt="">
+                    <img src="../mmi-e-sport/assets/img/team.webp" alt="">
                     <h3>Team fortress</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
+                    <p>Team Fortress 2 est un jeu de tir à la première personne construit autour de deux équipes s'affrontant pour un objectif. Multijoueur en ligne fondé sur le jeu d'équipe, en 5 contre 5 au maximum, les joueurs peuvent choisir de jouer l'une des neuf classes disponibles, chacune avec ses propres forces et faiblesses. </p>
                 </div>
-                <form action="#" method="post">
+                <form action="">
                     <div class="upper">
                         <div class="upper-left">
                             <h4>equipe</h4>
-                            <input type="text" placeholder="Nom" name="nomtf2">
+                            <input type="text" placeholder="Nom">
                             <label for="file-upload3" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
                             <input id="file-upload3" type="file" name="picture" onchange="previewPicture3(this)" accept=".jpg, .png, .gif" />
                         </div>
@@ -749,11 +230,11 @@ if($nom_create != NULL){
                     <div class="lower">
                         <div class="lower-left">
                             <h4>MEMBRES D’ÉQUIPE</h4>
-                            <input type="email" placeholder="Mail Universitaire chef d'équipe" name="mail1tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail2tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail3tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail4tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail5tf2">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
+                            <input type="email" placeholder="Mail Universitaire">
                         </div>
                     </div>
                     <input type="submit" value="Valider" class="button">
@@ -763,270 +244,35 @@ if($nom_create != NULL){
                 <img src="../mmi-e-sport/assets/img/close.svg" alt="">
             </div>
         </div>
-        <?php
-$nom_create = $_POST['nomtf2'];
-$mail1 = $_POST['mail1tf2'];
-$mail2 = $_POST['mail2tf2'];
-$mail3 = $_POST['mail3tf2'];
-$mail4 = $_POST['mail4tf2'];   
-$mail5 = $_POST['mail5tf2'];
-if($nom_create != NULL){
-    foreach($db->query("SELECT * FROM equipes INNER JOIN jeux ON equipes.jeu_id = jeux.id WHERE jeux.nom = 'tf2'") as $row) {
-        $team_valo_name = $row['1'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail1'") as $player1) {
-        $player1_id = $player1['0'];
-        $player1_name = $player1['1'];
-        $player1_mail = $player1['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail2'") as $player2) {
-        $player2_id = $player2['0'];
-        $player2_name = $player2['1'];
-        $player2_mail = $player2['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail3'") as $player3) {
-        $player3_id = $player3['0'];
-        $player3_name = $player3['1'];
-        $player3_mail = $player3['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail4'") as $player4) {
-        $player4_id = $player4['0'];
-        $player4_name = $player4['1'];
-        $player4_mail = $player4['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail5'") as $player5) {
-        $player5_id = $player5['0'];
-        $player5_name = $player5['1'];
-        $player5_mail = $player5['2'];
-        }
-    if($nom_create != $team_valo_name){       
-                if($mail1 == $player1_mail){
-                    if($mail2 == $player2_mail){
-                        if($mail3 == $player3_mail){
-                            if($mail4 == $player4_mail){
-                                if($mail5 == $player5_mail){
-                                            $q = $db->prepare("INSERT INTO equipes(nom,jeu_id,chef) VALUES (:nom,:jeu_id,:chef)");
-                                            $q->execute([
-                                                'nom' => $nom_create,
-                                                'jeu_id'=> 3,
-                                                'chef' => $player1_name
-                                                ]);
-                                                foreach($db->query("SELECT * from equipes WHERE chef = '$player1_name'") as $equipes){
-                                                    $id_equipev = $equipes['0'];
-                                                    }
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player1_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player2_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player3_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                        $i->execute([
-                                        'idplayer' => $player4_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player5_id,
-                                        'idteam'=> $id_equipev,
-                                        ]);   
-                                }
-                            }
-                        }
-                    }   
-                }
-        else{
-            echo "<p>Veuillez rentrez tout les champs</p>";
-        }
-    }
-    elseif($team_valo_name==$nom_create){
-            echo "<p>Le nom d'équipe est déjà utilisé</p>";
-    }
-} 
-?>
 </div>
-
-<!-- fin -->
-<?php
-}
-if($mailchefv == $nomplayer){
-    ?>
-<!-- debut chef tf2 -->
-<div class="background-pop-up-competitive" data-pop="3">
-        <div class="pop-up-competitive">
-            <div class="contain">
-                <div class="left">
-                    <img src="../mmi-e-sport/assets/img/team.svg" alt="">
-                    <h3>Team fortress</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
-                </div>
-                <form action="#" method="post">
-                    <div class="upper">
-                        <div class="upper-left">
-                            <h4>equipe</h4>
-                            <input type="text" placeholder="Nom" name="nomtf2">
-                            <label for="file-upload3" class="custom-file-upload"><i class="fa fa-cloud-upload"></i>Votre Logo</label>
-                            <input id="file-upload3" type="file" name="picture" onchange="previewPicture3(this)" accept=".jpg, .png, .gif" />
-                        </div>
-                        <div class="upper-right">
-                            <div class="logo">
-                                <img id="imageteam" src="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lower">
-                        <div class="lower-left">
-                            <h4>MEMBRES D’ÉQUIPE</h4>
-                            <input type="email" placeholder="Mail Universitaire chef d'équipe" name="mail1tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail2tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail3tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail4tf2">
-                            <input type="email" placeholder="Mail Universitaire" name="mail5tf2">
-                        </div>
-                    </div>
-                    <input type="submit" value="Modifier" class="button">
-                </form>
-            </div>
-            <div class="close">
-                <img src="../mmi-e-sport/assets/img/close.svg" alt="">
-            </div>
-        </div>
-        <?php
-$nom_create = $_POST['nomtf2'];
-$mail1 = $_POST['mail1tf2'];
-$mail2 = $_POST['mail2tf2'];
-$mail3 = $_POST['mail3tf2'];
-$mail4 = $_POST['mail4tf2'];   
-$mail5 = $_POST['mail5tf2'];
-if($nom_create != NULL){
-    foreach($db->query("SELECT * FROM equipes INNER JOIN jeux ON equipes.jeu_id = jeux.id WHERE jeux.nom = 'tf2'") as $row) {
-        $team_valo_name = $row['1'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail1'") as $player1) {
-        $player1_id = $player1['0'];
-        $player1_name = $player1['1'];
-        $player1_mail = $player1['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail2'") as $player2) {
-        $player2_id = $player2['0'];
-        $player2_name = $player2['1'];
-        $player2_mail = $player2['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail3'") as $player3) {
-        $player3_id = $player3['0'];
-        $player3_name = $player3['1'];
-        $player3_mail = $player3['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail4'") as $player4) {
-        $player4_id = $player4['0'];
-        $player4_name = $player4['1'];
-        $player4_mail = $player4['2'];
-        }
-    foreach($db->query("SELECT * from joueurs WHERE email = '$mail5'") as $player5) {
-        $player5_id = $player5['0'];
-        $player5_name = $player5['1'];
-        $player5_mail = $player5['2'];
-        }
-    if($nom_create != $team_valo_name){       
-                if($mail1 == $player1_mail){
-                    if($mail2 == $player2_mail){
-                        if($mail3 == $player3_mail){
-                            if($mail4 == $player4_mail){
-                                if($mail5 == $player5_mail){
-                                    foreach($db->query("SELECT * from equipes WHERE chef = '$player1_name'") as $equipes){
-                                        $id_equipev = $equipes['0'];
-                                        }
-                                    $db->exec("DELETE FROM membres_equipe WHERE equipe_id = '$id_equipev';
-                                            DELETE FROM equipes WHERE id = '$id_equipev';");
-                                            $q = $db->prepare("INSERT INTO equipes(nom,jeu_id,chef) VALUES (:nom,:jeu_id,:chef)");
-                                            $q->execute([
-                                                'nom' => $nom_create,
-                                                'jeu_id'=> 3,
-                                                'chef' => $player1_name
-                                                ]);
-                                                foreach($db->query("SELECT * from equipes WHERE chef = '$player1_name'") as $equipes){
-                                                    $id_equipev = $equipes['0'];
-                                                    }
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player1_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                         $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player2_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player3_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                        $i->execute([
-                                        'idplayer' => $player4_id,
-                                        'idteam'=> $id_equipev,
-                                        ]); 
-                                        $i = $db->prepare("INSERT INTO membres_equipe(joueur_id,equipe_id) VALUES (:idplayer,:idteam)");
-                                         $i->execute([
-                                        'idplayer' => $player5_id,
-                                        'idteam'=> $id_equipev,
-                                        ]);   
-                                }
-                            }
-                        }
-                    }   
-                }
-        else{
-            echo "<p>Veuillez rentrez tout les champs</p>";
-        }
-    }
-    elseif($team_valo_name==$nom_create){
-            echo "<p>Le nom d'équipe est déjà utilisé</p>";
-    }
-} 
-?>
-</div>
-<!--  fin chef tf2 -->
-<?php
-}?>
     </div>
     <div class="container-jeux-autre">
         <h1>NON-COMPÉTITIF</h1>
         <h2><span></span>ACCÈS LIBRE</h2>
         <div class="jeux-autre">
             <div class="jeux">
-                <img src="../mmi-e-sport/assets/img/smash.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/smash.webp" alt="">
                 <h3>Smash Bros <br> Ultimate</h3>
             </div>
             <div class="jeux">
                 <h3>Mario Kart</h3>
-                <img src="../mmi-e-sport/assets/img/mario.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/mario.webp" alt="">
             </div>
             <div class="jeux">
                 <h3>Fall Guys</h3>
-                <img src="../mmi-e-sport/assets/img/fall.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/fall.webp" alt="">
             </div>
             <div class="jeux">
                 <h3>Just Dance</h3>
-                <img src="../mmi-e-sport/assets/img/just.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/just.webp" alt="">
             </div>
             <div class="jeux">
                 <h3>Trackmania</h3>
-                <img src="../mmi-e-sport/assets/img/track.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/track.webp" alt="">
             </div>
             <div class="jeux">
                 <h3>Réalité <br> Virtuelle</h3>
-                <img src="../mmi-e-sport/assets/img/vr.svg" alt="">
+                <img src="../mmi-e-sport/assets/img/vr.webp" alt="">
             </div>
         </div>
     </div>
@@ -1035,347 +281,197 @@ if($nom_create != NULL){
 <!-- Page Equipe -->
 
 <div class="page page-teams" data-page="4">
-<?php
-foreach($db->query("SELECT e.nom AS equipe, GROUP_CONCAT(CONCAT('<li>', j.pseudo, '</li>') SEPARATOR '') AS joueurs
-FROM equipes e
-JOIN membres_equipe me ON e.id = me.equipe_id
-JOIN joueurs j ON me.joueur_id = j.id
-WHERE e.chef = '$mailchef'
-GROUP BY e.id") as $myteam0v){
-    $name_myteam0v = $myteam0v['0'];
-    }  
-    if($name_myteam0v!=''){
-    ?>
     <div class="myEquipe">
         <div class="head-myEquipe">
             <h3>MES ÉQUIPES</h3>
         </div>
         <div class="infos-myEquipe">
-            <!-- valo -->
-            <?php
-foreach($db->query("SELECT e.nom AS equipe, GROUP_CONCAT(CONCAT('<li>', j.pseudo, '</li>') SEPARATOR '') AS joueurs
-FROM equipes e
-JOIN membres_equipe me ON e.id = me.equipe_id
-JOIN joueurs j ON me.joueur_id = j.id
-WHERE e.jeu_id = 1 AND e.chef = '$mailchef'
-GROUP BY e.id") as $myteamv){
-    $name_myteamv = $myteamv['0'];
-    $player_myteamv = $myteamv['1'];
-    }  
-    if($name_myteam !=''){
-    ?>
             <div class="jeu">
                 <div class="head-jeu">
                     <h4>Valorant</h4>
-                    <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
+                    <img src="../mmi-e-sport/assets/img/valo.webp" alt="">
                 </div>
-                 <div class="contain-jeu">
+                <div class="contain-jeu">
                     <h5>Nom d’équipe</h5>
-                    <h6><?php echo $name_myteamv?></h6>
+                    <h6>LA TEAM DES FOUS</h6>
                     <div class="container-joueurs">
-                        <h5>Joueurs</h5>    
+                        <h5>Joueurs</h5>
                         <ul>
-                            <?php
-                            echo $player_myteamv; 
-                            ?>
+                            <li>teregkoe</li>
+                            <li>ipjip</li>
+                            <li>pijipjiop</li>
+                            <li>ijijiij</li>
+                            <li>ijijiji</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <?php
-    }
-    ?>
-        <!-- fin -->
-        <!-- rocket league -->
-        <?php
-        foreach($db->query("SELECT e.nom AS equipe, GROUP_CONCAT(CONCAT('<li>', j.pseudo, '</li>') SEPARATOR '') AS joueurs
-        FROM equipes e
-        JOIN membres_equipe me ON e.id = me.equipe_id
-        JOIN joueurs j ON me.joueur_id = j.id
-        WHERE e.jeu_id = 2 AND e.chef = '$mailchef'
-        GROUP BY e.id") as $myteamr){
-            $name_myteamr = $myteamr['0'];
-            $player_myteamr = $myteamr['1'];
-            }  
-            if($name_myteamr !=''){
-            ?>
-                    <div class="jeu">
-                        <div class="head-jeu">
-                            <h4>Rocket League</h4>
-                            <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
-                        </div>
-                         <div class="contain-jeu">
-                            <h5>Nom d’équipe</h5>
-                            <h6><?php echo $name_myteamr?></h6>
-                            <div class="container-joueurs">
-                                <h5>Joueurs</h5>    
-                                <ul>
-                                    <?php
-                                    echo $player_myteamr; 
-                                    ?>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-            }
-            ?>
-        <!-- Fin -->
-         <!-- TF2 -->
-         <?php
-        foreach($db->query("SELECT e.nom AS equipe, GROUP_CONCAT(CONCAT('<li>', j.pseudo, '</li>') SEPARATOR '') AS joueurs
-        FROM equipes e
-        JOIN membres_equipe me ON e.id = me.equipe_id
-        JOIN joueurs j ON me.joueur_id = j.id
-        WHERE e.jeu_id = 3 AND e.chef = '$mailchef'
-        GROUP BY e.id") as $myteamt){
-            $name_myteamt = $myteamt['0'];
-            $player_myteamt = $myteamt['1'];
-            }  
-            if($name_myteam !=''){
-            ?>
-                    <div class="jeu">
-                        <div class="head-jeu">
-                            <h4>Team Forteress 2</h4>
-                            <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
-                        </div>
-                         <div class="contain-jeu">
-                            <h5>Nom d’équipe</h5>
-                            <h6><?php echo $name_myteamt?></h6>
-                            <div class="container-joueurs">
-                                <h5>Joueurs</h5>    
-                                <ul>
-                                    <?php
-                                    echo $player_myteamt; 
-                                    ?>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-            }
-            ?>
-        <!-- Fin -->
-        </div>
-    </div>
-    <?php
-                }
-            
-                ?>
-
-                <!-- Page Equipe pas chef -->
-
-<div class="page page-teams" data-page="4">
-<?php
-foreach($db->query("SELECT * FROM `joueurs` WHERE pseudo = '$nomplayer'") as $idp){
-    $idplayer = $idp['0'];
-    }  
-foreach($db->query("SELECT joueurs_equipe.equipe_id, GROUP_CONCAT('<li>', joueurs.pseudo, '</li>' SEPARATOR '') AS joueurs
-FROM membres_equipe joueurs_equipe
-JOIN joueurs ON joueurs.id = joueurs_equipe.joueur_id
-JOIN equipes ON equipes.id = joueurs_equipe.equipe_id
-JOIN jeux ON jeux.id = equipes.jeu_id
-WHERE joueurs_equipe.equipe_id IN (
-  SELECT joueurs_equipe.equipe_id
-  FROM membres_equipe joueurs_equipe
-  WHERE joueurs_equipe.joueur_id = '$idplayer')
-GROUP BY joueurs_equipe.equipe_id") as $myteam0vv){
-    $name_myteam0vv = $myteam0vv['0'];
-    }  
-    if($name_myteam0vv !=''){
-    ?>
-    <div class="myEquipe">
-        <div class="head-myEquipe">
-            <h3>MES ÉQUIPES</h3>
-        </div>
-        <div class="infos-myEquipe">
-            <!-- valo -->
-            <?php
-foreach($db->query("SELECT joueurs_equipe.equipe_id, GROUP_CONCAT('<li>', joueurs.pseudo, '</li>' SEPARATOR '') AS joueurs
-FROM membres_equipe joueurs_equipe
-JOIN joueurs ON joueurs.id = joueurs_equipe.joueur_id
-JOIN equipes ON equipes.id = joueurs_equipe.equipe_id
-JOIN jeux ON jeux.id = equipes.jeu_id
-WHERE joueurs_equipe.equipe_id IN (
-  SELECT joueurs_equipe.equipe_id
-  FROM membres_equipe joueurs_equipe
-  WHERE jeux.nom = 'valorant' AND joueurs_equipe.joueur_id = '$idplayer')
-GROUP BY joueurs_equipe.equipe_id") as $myteamvv){
-    $name_myteamvv = $myteamvv['0'];
-    $player_myteamvv = $myteamvv['1'];
-    }  
-    foreach($db->query("SELECT * FROM `equipes` WHERE id = '$name_myteamvv'") as $idteamvv){
-        $name_teamv= $idteam['1'];
-        } 
-    if($name_myteamvv !=''){
-    ?>
             <div class="jeu">
                 <div class="head-jeu">
                     <h4>Valorant</h4>
-                    <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
+                    <img src="../mmi-e-sport/assets/img/valo.webp" alt="">
                 </div>
-                 <div class="contain-jeu">
+                <div class="contain-jeu">
                     <h5>Nom d’équipe</h5>
-                    <h6><?php echo $name_teamvv?></h6>
+                    <h6>LA TEAM DES FOUS</h6>
                     <div class="container-joueurs">
-                        <h5>Joueurs</h5>    
+                        <h5>Joueurs</h5>
                         <ul>
-                            <?php
-                            echo $player_myteamvv; 
-                            ?>
+                            <li>teregkoe</li>
+                            <li>ipjip</li>
+                            <li>pijipjiop</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <?php
-    }
-    ?>
-        <!-- fin -->
-        <!-- rocket league -->
-        <?php
-        foreach($db->query("SELECT joueurs_equipe.equipe_id, GROUP_CONCAT('<li>', joueurs.pseudo, '</li>' SEPARATOR '') AS joueurs
-        FROM membres_equipe joueurs_equipe
-        JOIN joueurs ON joueurs.id = joueurs_equipe.joueur_id
-        JOIN equipes ON equipes.id = joueurs_equipe.equipe_id
-        JOIN jeux ON jeux.id = equipes.jeu_id
-        WHERE joueurs_equipe.equipe_id IN (
-          SELECT joueurs_equipe.equipe_id
-          FROM membres_equipe joueurs_equipe
-          WHERE jeux.nom = 'rocket' AND joueurs_equipe.joueur_id = '$idplayer')
-        GROUP BY joueurs_equipe.equipe_id") as $myteamrr){
-            $name_myteamrr = $myteamrr['0'];
-            $player_myteamrr = $myteamrr['1'];
-            }  
-            foreach($db->query("SELECT * FROM `equipes` WHERE id = '$name_myteamrr'") as $idteamrr){
-                $name_teamrr= $idteamrr['1'];
-                } 
-            if($name_myteam !=''){
-            ?>
-                    <div class="jeu">
-                        <div class="head-jeu">
-                            <h4>Rocket League</h4>
-                            <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
-                        </div>
-                         <div class="contain-jeu">
-                            <h5>Nom d’équipe</h5>
-                            <h6><?php echo $name_teamrr?></h6>
-                            <div class="container-joueurs">
-                                <h5>Joueurs</h5>    
-                                <ul>
-                                    <?php
-                                    echo $player_myteamrr; 
-                                    ?>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-            }
-            ?>
-        <!-- Fin -->
-         <!-- TF2 -->
-         <?php
-        foreach($db->query("SELECT joueurs_equipe.equipe_id, GROUP_CONCAT('<li>', joueurs.pseudo, '</li>' SEPARATOR '') AS joueurs
-        FROM membres_equipe joueurs_equipe
-        JOIN joueurs ON joueurs.id = joueurs_equipe.joueur_id
-        JOIN equipes ON equipes.id = joueurs_equipe.equipe_id
-        JOIN jeux ON jeux.id = equipes.jeu_id
-        WHERE joueurs_equipe.equipe_id IN (
-          SELECT joueurs_equipe.equipe_id
-          FROM membres_equipe joueurs_equipe
-          WHERE jeux.nom = 'tf2' AND joueurs_equipe.joueur_id = '$idplayer')
-        GROUP BY joueurs_equipe.equipe_id") as $myteamtt){
-            $name_myteamtt = $myteamtt['0'];
-            $player_myteamtt = $myteamtt['1'];
-            }  
-            foreach($db->query("SELECT * FROM `equipes` WHERE id = '$name_myteamtt'") as $idteamtt){
-            $name_teamtt= $idteamtt['1'];
-            }  
-
-            if($name_myteamtt !=''){
-            ?>
-                    <div class="jeu">
-                        <div class="head-jeu">
-                            <h4>Team Forteress 2</h4>
-                            <img src="../mmi-e-sport/assets/img/valo.svg" alt="">
-                        </div>
-                         <div class="contain-jeu">
-                            <h5>Nom d’équipe</h5>
-                            <h6><?php echo $name_teamtt?></h6>
-                            <div class="container-joueurs">
-                                <h5>Joueurs</h5>    
-                                <ul>
-                                    <?php
-                                    echo $player_myteamtt; 
-                                    ?>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-            }
-            ?>
-        <!-- Fin -->
         </div>
     </div>
-    <?php
-                }
-            
-                ?>
     <h1>ÉQUIPES</h1>
     <h2><span></span>INSCRITES</h2>
     <div class="valorant-teams">
         <h3>VALORANT</h3>
         <div class="container-card">
-            <!-- Début -->
-            <?php
-            $serveur = "localhost";								
-            $utilisateur = "mamp";				
-            $mdp = "root";						
-            $base = "mmiesport";
-            $lienBase = mysqli_init();
-            $succes = mysqli_real_connect($lienBase,$serveur,$utilisateur,$mdp,$base,$port) OR DIE ('Probl&egrave;me au niveau du serveur de bdd');
-            $requete2 = "SELECT e.nom AS equipe, GROUP_CONCAT(CONCAT('<li>', j.pseudo, '</li>') SEPARATOR '') AS joueurs
-            FROM equipes e
-            JOIN membres_equipe me ON e.id = me.equipe_id
-            JOIN joueurs j ON me.joueur_id = j.id
-            WHERE e.jeu_id = 1 
-            GROUP BY e.id;
-            ";
-            $resultat2 = mysqli_query($lienBase,$requete2) OR DIE("Requ&ecirc;te : ".mysql_error());
-            if(!$resultat2) {
-                echo "Impossible d'ex&eacute;cuter la requ&ecirc;te dans la base : " . mysql_error();
-                exit;
-            }
-            $nbEnreg2 = mysqli_num_rows($resultat2);
-        
-            
-            for ($j=0;$j<$nbEnreg2;$j++) {
-                $donnees2 = mysqli_fetch_row($resultat2);
-                $name_team= $donnees2[0];
-                $name_player = $donnees2[1];
-                
-                ?>
-                <div class="carousel">
+            <div class="carousel">
                     <div class="spin-container">
                         <div class="front">
                             <div class="contain-front">
-                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
-                                <h3><?php echo $name_team?></h3>
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>aaaaaaaaaa</h3>
                             </div>
                         </div>
                         <div class="back">
                             <h3>Players</h3>
                             <ul>
-                                <li><?php echo $name_player?></li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
                             </ul>
                         </div>
                     </div>
-                </div>   
-                        <!--Fin  -->
-                        <?php
-            }
-            ?>
+                </div>
+            <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
         </div>
     </div>
 
@@ -1383,57 +479,46 @@ GROUP BY joueurs_equipe.equipe_id") as $myteamvv){
     <div class="rocket-teams">
         <h3>ROCKET LEAGUE</h3>
         <div class="container-card">
-
-                <!-- Début -->
-            <?php
-            $serveur = "localhost";								
-            $utilisateur = "mamp";				
-            $mdp = "root";						
-            $base = "mmiesport";
-            $lienBase = mysqli_init();
-            $succes = mysqli_real_connect($lienBase,$serveur,$utilisateur,$mdp,$base,$port) OR DIE ('Probl&egrave;me au niveau du serveur de bdd');
-            $requete2 = "SELECT e.nom AS equipe, GROUP_CONCAT(CONCAT('<li>', j.pseudo, '</li>') SEPARATOR '') AS joueurs
-            FROM equipes e
-            JOIN membres_equipe me ON e.id = me.equipe_id
-            JOIN joueurs j ON me.joueur_id = j.id
-            WHERE e.jeu_id = 2
-            GROUP BY e.id;
-            ";
-            $resultat2 = mysqli_query($lienBase,$requete2) OR DIE("Requ&ecirc;te : ".mysql_error());
-            if(!$resultat2) {
-                echo "Impossible d'ex&eacute;cuter la requ&ecirc;te dans la base : " . mysql_error();
-                exit;
-            }
-            $nbEnreg2 = mysqli_num_rows($resultat2);
-        
-            
-            for ($j=0;$j<$nbEnreg2;$j++) {
-                $donnees2 = mysqli_fetch_row($resultat2);
-                $name_team= $donnees2[0];
-                $name_player = $donnees2[1];
-                
-                ?>
-                <div class="carousel">
+            <div class="carousel">
                     <div class="spin-container">
                         <div class="front">
                             <div class="contain-front">
-                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
-                                <h3><?php echo $name_team?></h3>
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
                             </div>
                         </div>
                         <div class="back">
                             <h3>Players</h3>
                             <ul>
-                                <li><?php echo $name_player?></li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
                             </ul>
                         </div>
                     </div>
-                </div>   
-                        <!--Fin  -->
-                        <?php
-            }
-            ?>
-                
+                </div>
+            <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 
@@ -1441,57 +526,46 @@ GROUP BY joueurs_equipe.equipe_id") as $myteamvv){
     <div class="tf2-teams">
         <h3>TEAM FORTRESS</h3>
         <div class="container-card">
-
-            <!-- Début -->
-            <?php
-            $serveur = "localhost";								
-            $utilisateur = "mamp";				
-            $mdp = "root";						
-            $base = "mmiesport";
-            $lienBase = mysqli_init();
-            $succes = mysqli_real_connect($lienBase,$serveur,$utilisateur,$mdp,$base,$port) OR DIE ('Probl&egrave;me au niveau du serveur de bdd');
-            $requete2 = "SELECT e.nom AS equipe, GROUP_CONCAT(CONCAT('<li>', j.pseudo, '</li>') SEPARATOR '') AS joueurs
-            FROM equipes e
-            JOIN membres_equipe me ON e.id = me.equipe_id
-            JOIN joueurs j ON me.joueur_id = j.id
-            WHERE e.jeu_id = 3
-            GROUP BY e.id;
-            ";
-            $resultat2 = mysqli_query($lienBase,$requete2) OR DIE("Requ&ecirc;te : ".mysql_error());
-            if(!$resultat2) {
-                echo "Impossible d'ex&eacute;cuter la requ&ecirc;te dans la base : " . mysql_error();
-                exit;
-            }
-            $nbEnreg2 = mysqli_num_rows($resultat2);
-        
-            
-            for ($j=0;$j<$nbEnreg2;$j++) {
-                $donnees2 = mysqli_fetch_row($resultat2);
-                $name_team= $donnees2[0];
-                $name_player = $donnees2[1];
-                
-                ?>
-                <div class="carousel">
+            <div class="carousel">
                     <div class="spin-container">
                         <div class="front">
                             <div class="contain-front">
-                                <img src="../mmi-e-sport/assets/img/logo-exemple.svg" alt="">
-                                <h3><?php echo $name_team?></h3>
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
                             </div>
                         </div>
                         <div class="back">
                             <h3>Players</h3>
                             <ul>
-                                <li><?php echo $name_player?></li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
                             </ul>
                         </div>
                     </div>
-                </div>   
-                        <!--Fin  -->
-                        <?php
-            }
-            ?>
-
+                </div>
+            <div class="carousel">
+                    <div class="spin-container">
+                        <div class="front">
+                            <div class="contain-front">
+                                <img src="../mmi-e-sport/assets/img/logo-exemple.webp" alt="">
+                                <h3>team</h3>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h3>Players</h3>
+                            <ul>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                                <li>joueurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 </div>
